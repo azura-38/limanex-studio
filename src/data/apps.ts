@@ -76,7 +76,7 @@ export const apps: AppData[] = [
         delay: 400
       }
     ],
-    playstore_link: "#",
+    playstore_link: "https://play.google.com/store/apps/details?id=com.limanex.vitacase",
     is_featured: true
   }
 ];
