@@ -3,16 +3,25 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { apps } from "../data/apps";
 import { siteSettings } from "../data/siteSettings";
+import { useSEO } from "../hooks/useSEO";
+import { StructuredData, getOrganizationSchema, getWebSiteSchema, getBreadcrumbSchema } from "../components/StructuredData";
 
-export function Home() {
+export default function Home() {
   const featuredApp = apps.find(a => a.is_featured) || apps[0];
 
+  useSEO({
+    title: "Limanex Studio — Apps & Games Designed for the Future",
+    description: "Limanex Studio builds precision-engineered apps and games. Discover VitaCase, our smart health tracking app, and explore our growing collection of digital tools.",
+  });
+
   return (
-    <main className="flex-grow pt-[48px]">
+    <main id="main-content" className="flex-grow pt-[48px]">
+      <StructuredData data={[getOrganizationSchema(), getWebSiteSchema(), getBreadcrumbSchema([{ name: "Home", url: "https://limanexstudio.com/" }])]} />
+
       {/* Hero Section */}
-      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden flex-col px-container-margin py-[160px]">
+      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden flex-col px-container-margin py-[160px]" aria-label="Hero">
         {/* Animated Background Glows */}
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
           <div className="absolute top-[20%] left-[20%] w-[40vw] h-[40vw] rounded-full bg-primary mix-blend-screen filter blur-[120px] opacity-30 animate-blob"></div>
           <div className="absolute top-[30%] right-[15%] w-[35vw] h-[35vw] rounded-full bg-secondary mix-blend-screen filter blur-[120px] opacity-20 animate-blob-reverse" style={{ animationDelay: '2s' }}></div>
           <div className="absolute bottom-[0%] left-[40%] w-[45vw] h-[45vw] rounded-full bg-primary-container mix-blend-screen filter blur-[150px] opacity-20 animate-blob" style={{ animationDelay: '4s' }}></div>
@@ -26,9 +35,9 @@ export function Home() {
         >
           {siteSettings.ai_section_visible && (
             <div className="relative inline-block">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary to-secondary blur-xl opacity-30 animate-pulse-slow"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary to-secondary blur-xl opacity-30 animate-pulse-slow" aria-hidden="true"></div>
               <span className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-bright/50 backdrop-blur-xl border border-outline text-[12px] font-bold text-white tracking-[0.2em] uppercase shadow-2xl">
-                <span className="w-2 h-2 rounded-full bg-secondary animate-pulse shadow-[0_0_10px_rgba(236,72,153,0.8)]"></span>
+                <span className="w-2 h-2 rounded-full bg-secondary animate-pulse shadow-[0_0_10px_rgba(236,72,153,0.8)]" aria-hidden="true"></span>
                 {siteSettings.ai_banner_text}
               </span>
             </div>
@@ -40,23 +49,23 @@ export function Home() {
           </h1>
 
           <p className="text-[18px] leading-relaxed text-on-surface-variant max-w-3xl mx-auto font-medium">
-            Apps & Games Designed for the Future. Precision-engineered for performance, crafted with an obsession for detail.
+            Apps &amp; Games Designed for the Future. Precision-engineered for performance, crafted with an obsession for detail.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-6 items-center">
             {featuredApp && (
-              <Link to={`/apps/${featuredApp.slug}`} className="group relative px-8 py-4 rounded-2xl text-[17px] font-bold active:scale-95 transition-all duration-300 w-full sm:w-auto hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(139,92,246,0.4)]">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary to-secondary rounded-2xl opacity-90 group-hover:opacity-100 transition-opacity blur-[2px] group-hover:blur-[8px]"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary to-secondary rounded-2xl"></div>
+              <Link to={`/apps/${featuredApp.slug}`} className="group relative px-8 py-4 rounded-2xl text-[17px] font-bold active:scale-95 transition-all duration-300 w-full sm:w-auto hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(139,92,246,0.4)] min-h-[48px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary to-secondary rounded-2xl opacity-90 group-hover:opacity-100 transition-opacity blur-[2px] group-hover:blur-[8px]" aria-hidden="true"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary to-secondary rounded-2xl" aria-hidden="true"></div>
                 <span className="relative text-white flex items-center justify-center gap-2">
-                  Explore {featuredApp.name} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  Explore {featuredApp.name} <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
                 </span>
               </Link>
             )}
-            <Link to="/games" className="group relative px-8 py-4 rounded-2xl text-[17px] font-bold active:scale-95 transition-all duration-300 w-full sm:w-auto text-center hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(236,72,153,0.3)]">
-              <div className="absolute inset-0 bg-gradient-to-r from-surface-bright via-surface-bright to-surface-bright rounded-2xl opacity-100 group-hover:opacity-0 transition-opacity border border-outline"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-secondary/80 to-primary-container/80 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-[4px]"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary-container rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <Link to="/games" className="group relative px-8 py-4 rounded-2xl text-[17px] font-bold active:scale-95 transition-all duration-300 w-full sm:w-auto text-center hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(236,72,153,0.3)] min-h-[48px] flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-surface-bright via-surface-bright to-surface-bright rounded-2xl opacity-100 group-hover:opacity-0 transition-opacity border border-outline" aria-hidden="true"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary/80 to-primary-container/80 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-[4px]" aria-hidden="true"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary-container rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true"></div>
               <span className="relative text-white flex items-center justify-center gap-2">
                 View Games
               </span>
@@ -66,8 +75,8 @@ export function Home() {
       </section>
 
       {/* AI is coming Section */}
-      <section className="relative w-full py-[160px] overflow-hidden bg-background">
-        <div className="absolute inset-0 z-0 pointer-events-none">
+      <section className="relative w-full py-[160px] overflow-hidden bg-background" aria-label="AI announcement">
+        <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary blur-[200px] opacity-20"></div>
         </div>
         
@@ -78,7 +87,7 @@ export function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10 max-w-4xl mx-auto px-container-margin text-center flex flex-col items-center gap-6"
         >
-          <div className="inline-flex items-center justify-center p-4 rounded-full bg-surface-bright/50 border border-outline shadow-2xl mb-4">
+          <div className="inline-flex items-center justify-center p-4 rounded-full bg-surface-bright/50 border border-outline shadow-2xl mb-4" aria-hidden="true">
             <span className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-container to-secondary animate-pulse-slow"></span>
           </div>
           

@@ -1,9 +1,18 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
+import { useSEO } from "../hooks/useSEO";
+import { StructuredData, getOrganizationSchema, getBreadcrumbSchema } from "../components/StructuredData";
 
-export function Contact() {
+export default function Contact() {
+  useSEO({
+    title: "Contact Us — Limanex Studio",
+    description: "Get in touch with Limanex Studio. Questions about our apps, partnership opportunities, or just want to say hello — we're ready to listen.",
+  });
+
   return (
-    <main className="flex-grow flex flex-col justify-center max-w-[1100px] mx-auto w-full px-container-margin py-stack-xl md:py-24 pt-[140px]">
+    <main id="main-content" className="flex-grow flex flex-col justify-center max-w-[1100px] mx-auto w-full px-container-margin py-stack-xl md:py-24 pt-[140px]">
+      <StructuredData data={[getOrganizationSchema(), getBreadcrumbSchema([{ name: "Home", url: "https://limanexstudio.com/" }, { name: "Contact", url: "https://limanexstudio.com/contact" }])]} />
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-stack-xl lg:gap-32 items-center">
         {/* Left Column: Email & Info */}
         <motion.div 
@@ -37,38 +46,40 @@ export function Contact() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="relative"
         >
-          <div className="absolute -inset-1 blur-xl bg-gradient-to-r from-primary to-secondary rounded-2xl opacity-20 animate-pulse-slow"></div>
+          <div className="absolute -inset-1 blur-xl bg-gradient-to-r from-primary to-secondary rounded-2xl opacity-20 animate-pulse-slow" aria-hidden="true"></div>
           <div className="bg-surface/60 backdrop-blur-3xl border border-outline p-8 md:p-12 rounded-xl relative z-10">
-            <form className="space-y-stack-md" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-stack-md" onSubmit={(e) => e.preventDefault()} noValidate>
             <div className="space-y-2">
-              <label className="text-[12px] font-semibold uppercase tracking-widest text-on-surface-variant block" htmlFor="name">Name</label>
+              <label className="text-[12px] font-semibold uppercase tracking-widest text-on-surface-variant block" htmlFor="contact-name">Name</label>
               <input 
                 className="w-full bg-surface border-b border-outline focus:border-primary-container focus:ring-0 px-0 py-3 text-on-background text-[17px] outline-none transition-colors placeholder:text-on-surface-variant/50 rounded-none" 
-                id="name" 
+                id="contact-name" 
                 name="name" 
                 placeholder="Your full name" 
                 required 
                 type="text"
+                autoComplete="name"
               />
             </div>
             
             <div className="space-y-2">
-              <label className="text-[12px] font-semibold uppercase tracking-widest text-on-surface-variant block" htmlFor="email">Email Address</label>
+              <label className="text-[12px] font-semibold uppercase tracking-widest text-on-surface-variant block" htmlFor="contact-email">Email Address</label>
               <input 
                 className="w-full bg-surface border-b border-outline focus:border-primary-container focus:ring-0 px-0 py-3 text-on-background text-[17px] outline-none transition-colors placeholder:text-on-surface-variant/50 rounded-none" 
-                id="email" 
+                id="contact-email" 
                 name="email" 
                 placeholder="you@example.com" 
                 required 
                 type="email"
+                autoComplete="email"
               />
             </div>
             
             <div className="space-y-2">
-              <label className="text-[12px] font-semibold uppercase tracking-widest text-on-surface-variant block" htmlFor="message">Message</label>
+              <label className="text-[12px] font-semibold uppercase tracking-widest text-on-surface-variant block" htmlFor="contact-message">Message</label>
               <textarea 
                 className="w-full bg-surface border-b border-outline focus:border-primary-container focus:ring-0 px-0 py-3 text-on-background text-[17px] outline-none transition-colors placeholder:text-on-surface-variant/50 resize-none rounded-none" 
-                id="message" 
+                id="contact-message" 
                 name="message" 
                 placeholder="How can we help you?" 
                 required 
@@ -78,14 +89,14 @@ export function Contact() {
             
             <div className="pt-4">
               <button 
-                className="group relative w-full md:w-auto px-8 py-4 rounded-2xl text-[17px] font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(139,92,246,0.5)] active:scale-95" 
+                className="group relative w-full md:w-auto px-8 py-4 rounded-2xl text-[17px] font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(139,92,246,0.5)] active:scale-95 min-h-[48px]" 
                 type="submit"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary to-secondary rounded-2xl opacity-90 group-hover:opacity-100 transition-opacity blur-[2px] group-hover:blur-[8px]"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary to-secondary rounded-2xl border border-white/10"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary to-secondary rounded-2xl opacity-90 group-hover:opacity-100 transition-opacity blur-[2px] group-hover:blur-[8px]" aria-hidden="true"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary to-secondary rounded-2xl border border-white/10" aria-hidden="true"></div>
                 <span className="relative text-white flex items-center justify-center gap-2">
                   Send Message
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
                 </span>
               </button>
             </div>

@@ -1,5 +1,3 @@
-import { TestTube, Sparkles, Bell, Clock } from "lucide-react";
-
 export interface Feature {
   title: string;
   description: string;
@@ -11,6 +9,8 @@ export interface Screenshot {
   alt: string;
   glow: string;
   delay: number;
+  width: number;
+  height: number;
 }
 
 export interface AppData {
@@ -59,21 +59,27 @@ export const apps: AppData[] = [
     screenshots: [
       {
         src: "/screenshots/vitacase_1.png",
-        alt: "Manage Your Files",
+        alt: "VitaCase app — manage your health files and documents",
         glow: "rgba(79, 124, 255, 0.4)",
-        delay: 0
+        delay: 0,
+        width: 1080,
+        height: 2400,
       },
       {
         src: "/screenshots/vitacase_2.png",
-        alt: "Never Miss Appointments",
+        alt: "VitaCase app — never miss appointments with smart reminders",
         glow: "rgba(34, 211, 238, 0.4)",
-        delay: 200
+        delay: 200,
+        width: 1080,
+        height: 2400,
       },
       {
         src: "/screenshots/vitacase_3.png",
-        alt: "Never Forget Medications",
+        alt: "VitaCase app — track medications and never forget a dose",
         glow: "rgba(139, 92, 246, 0.4)",
-        delay: 400
+        delay: 400,
+        width: 1080,
+        height: 2400,
       }
     ],
     playstore_link: "https://play.google.com/store/apps/details?id=com.limanex.vitacase",

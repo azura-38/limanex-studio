@@ -1,9 +1,18 @@
 import { motion } from "motion/react";
+import { useSEO } from "../hooks/useSEO";
+import { StructuredData, getOrganizationSchema, getBreadcrumbSchema } from "../components/StructuredData";
 
-export function Games() {
+export default function Games() {
+  useSEO({
+    title: "Games — Coming Soon | Limanex Studio",
+    description: "Limanex Studio is forging the next generation of immersive gaming experiences. Expect groundbreaking visuals and uncompromising performance.",
+  });
+
   return (
-    <main className="flex-grow pt-32 pb-stack-xl px-container-margin max-w-[1100px] mx-auto w-full relative min-h-[70vh] flex items-center justify-center border-border">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[40vh] bg-primary/10 blur-[150px] pointer-events-none rounded-full"></div>
+    <main id="main-content" className="flex-grow pt-32 pb-stack-xl px-container-margin max-w-[1100px] mx-auto w-full relative min-h-[70vh] flex items-center justify-center">
+      <StructuredData data={[getOrganizationSchema(), getBreadcrumbSchema([{ name: "Home", url: "https://limanexstudio.com/" }, { name: "Games", url: "https://limanexstudio.com/games" }])]} />
+
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[40vh] bg-primary/10 blur-[150px] pointer-events-none rounded-full" aria-hidden="true"></div>
       
       <motion.div 
         initial={{ opacity: 0, scale: 0.95 }}
@@ -11,7 +20,7 @@ export function Games() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 text-center flex flex-col items-center max-w-2xl"
       >
-        <div className="inline-flex items-center justify-center p-4 rounded-full bg-surface-bright/50 border border-outline shadow-2xl mb-8">
+        <div className="inline-flex items-center justify-center p-4 rounded-full bg-surface-bright/50 border border-outline shadow-2xl mb-8" aria-hidden="true">
           <span className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-container to-secondary animate-pulse-slow"></span>
         </div>
         
