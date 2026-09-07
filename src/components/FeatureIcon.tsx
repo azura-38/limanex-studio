@@ -1,4 +1,4 @@
-import { TestTube, Sparkles, Bell, Clock, HelpCircle } from "lucide-react";
+import { TestTube, Sparkles, Bell, Clock, Heart, Camera, ShieldCheck, BookOpen, HelpCircle } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 import type { ComponentType } from "react";
 
@@ -7,6 +7,10 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   Sparkles,
   Bell,
   Clock,
+  Heart,
+  Camera,
+  ShieldCheck,
+  BookOpen,
 };
 
 interface FeatureIconProps extends LucideProps {

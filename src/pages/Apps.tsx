@@ -1,7 +1,6 @@
-import { motion } from "motion/react";
 import { Link, Navigate } from "react-router-dom";
 import { apps } from "../data/apps";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Smartphone, Play } from "lucide-react";
 import { useSEO } from "../hooks/useSEO";
 import { StructuredData, getOrganizationSchema, getBreadcrumbSchema } from "../components/StructuredData";
 
@@ -17,65 +16,94 @@ export default function Apps() {
   }
 
   return (
-    <div className="bg-[#0F172A] min-h-screen text-white font-sans selection:bg-[#4F7CFF] selection:text-white">
-      <StructuredData data={[getOrganizationSchema(), getBreadcrumbSchema([{ name: "Home", url: "https://limanexstudio.com/" }, { name: "Apps", url: "https://limanexstudio.com/apps" }])]} />
+    <main id="main-content" className="flex-grow pt-32 pb-32 px-6 max-w-[1100px] mx-auto w-full">
+      <StructuredData
+        data={[
+          getOrganizationSchema(),
+          getBreadcrumbSchema([
+            { name: "Home", url: "https://limanexstudio.com/" },
+            { name: "Apps", url: "https://limanexstudio.com/apps" },
+          ]),
+        ]}
+      />
 
-      {/* Background Glows */}
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#4F7CFF] mix-blend-screen filter blur-[150px] opacity-10 animate-blob"></div>
-        <div className="absolute top-[20%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-[#22D3EE] mix-blend-screen filter blur-[150px] opacity-10 animate-blob-reverse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-[-20%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-[#8B5CF6] mix-blend-screen filter blur-[180px] opacity-10 animate-blob" style={{ animationDelay: '4s' }}></div>
-      </div>
+      <header className="mb-20 text-center">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 shadow-md">
+          <Sparkles className="w-4 h-4 text-brand-300" aria-hidden="true" />
+          <span className="text-xs font-semibold text-gray-300 tracking-wider uppercase">Studio Applications</span>
+        </div>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
+          Our Applications
+        </h1>
+        <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto font-normal">
+          Explore our collection of precision-engineered tools designed to enhance your digital life.
+        </p>
+      </header>
 
-      <main id="main-content" className="relative z-10 pt-48 pb-40 px-6 max-w-7xl mx-auto w-full">
-        <header className="mb-20 text-center">
-           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="inline-flex items-center justify-center p-3 rounded-2xl bg-[#111827]/80 border border-[#22D3EE]/30 mb-6 shadow-[0_0_20px_rgba(34,211,238,0.1)]"
-            aria-hidden="true"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {apps.map((app) => (
+          <article
+            key={app.slug}
+            className="glass-card overflow-hidden border border-white/[0.08] p-8 sm:p-10 flex flex-col justify-between group"
           >
-            <Sparkles className="w-6 h-6 text-[#22D3EE]" />
-          </motion.div>
-          <h1 className="text-[56px] md:text-[72px] font-semibold tracking-[-0.03em] leading-tight text-white mb-6">
-            Our Applications
-          </h1>
-          <p className="text-[20px] text-[#CBD5F5] max-w-2xl mx-auto font-medium">
-            Explore our collection of precision-engineered tools designed to enhance your digital life.
-          </p>
-        </header>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {apps.map((app, i) => (
-            <motion.article
-              key={app.slug}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: i * 0.1 }}
-              className="group relative bg-[#111827]/40 backdrop-blur-xl border border-white/5 p-10 rounded-[40px] hover:border-[#4F7CFF]/30 transition-all duration-500 overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#4F7CFF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true"></div>
-              
-              <div className="relative z-10">
-                <div className="text-xs font-bold tracking-[0.2em] uppercase text-[#22D3EE] mb-4">
-                  {app.hero_tagline}
+            <div>
+              <div className="flex items-center justify-between gap-4 mb-6">
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1 rounded-full text-xs font-semibold text-accent-400 glass-pill">
+                    {app.hero_tagline}
+                  </span>
+                  {app.badge && (
+                    <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
+                      {app.badge}
+                    </span>
+                  )}
                 </div>
-                <h2 className="text-3xl font-bold text-white mb-4 group-hover:text-[#4F7CFF] transition-colors">{app.name}</h2>
-                <p className="text-[#CBD5F5] text-lg mb-8 leading-relaxed">
-                  {app.short_description}
-                </p>
-                <Link to={`/apps/${app.slug}`} className="inline-flex items-center gap-2 text-white font-bold group/link min-h-[44px]">
-                  View Showcase <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" aria-hidden="true" />
-                </Link>
+                {app.icon_url ? (
+                  <img
+                    src={app.icon_url}
+                    alt={`${app.name} icon`}
+                    className="w-10 h-10 rounded-xl object-contain shadow-md"
+                    width={40}
+                    height={40}
+                  />
+                ) : (
+                  <Smartphone className="w-5 h-5 text-gray-400 group-hover:text-brand-300 transition-colors" />
+                )}
               </div>
 
-              {/* Decorative app shape */}
-              <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-gradient-to-br from-[#4F7CFF]/10 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000" aria-hidden="true"></div>
-            </motion.article>
-          ))}
-        </div>
-      </main>
-    </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 group-hover:text-brand-300 transition-colors">
+                {app.name}
+              </h2>
+
+              <p className="text-gray-400 text-base leading-relaxed mb-8">
+                {app.short_description}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-between pt-6 border-t border-white/[0.06]">
+              <Link
+                to={`/apps/${app.slug}`}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-white group/link"
+              >
+                <span>View Showcase</span>
+                <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" aria-hidden="true" />
+              </Link>
+
+              {app.playstore_link && (
+                <a
+                  href={app.playstore_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition-colors"
+                >
+                  <Play className="w-3.5 h-3.5 fill-current" />
+                  <span>Google Play</span>
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </main>
   );
 }
