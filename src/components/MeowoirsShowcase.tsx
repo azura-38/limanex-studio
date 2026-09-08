@@ -71,7 +71,7 @@ export function MeowoirsShowcase() {
   return (
     <section
       id="meowoirs-showcase"
-      className="relative px-6 py-28 border-t border-white/[0.06] overflow-hidden"
+      className="relative px-6 py-28 border-t border-white/[0.06] overflow-hidden scroll-mt-24 sm:scroll-mt-28"
       aria-label="Featured Application — Meowoirs"
     >
       {/* Ambient background lighting */}

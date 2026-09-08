@@ -1,20 +1,21 @@
 import { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Shield, FileText, AlertTriangle, Mail, ChevronRight, ArrowLeft } from "lucide-react";
+import { Shield, FileText, AlertTriangle, Mail, ChevronRight, ArrowLeft, ArrowRightLeft } from "lucide-react";
 import clsx from "clsx";
 
-const legalLinks = [
-  { name: "VitaCase Privacy Policy", path: "/privacy/vitacase", icon: FileText },
-  { name: "VitaCase Terms & Conditions", path: "/terms/vitacase", icon: FileText },
-  { name: "VitaCase Disclaimer", path: "/disclaimer/vitacase", icon: AlertTriangle },
-  { name: "Contact Support", path: "/contact", icon: Mail },
-];
+interface LegalLinkItem {
+  name: string;
+  path: string;
+  matchPaths?: string[];
+  icon: typeof FileText;
+}
 
 interface LegalLayoutProps {
   title: string;
   subtitle?: string;
   badge?: string;
   badgeIcon?: typeof Shield;
+  app?: "vitacase" | "meowoirs";
   children: ReactNode;
 }
 
@@ -23,12 +24,73 @@ export function LegalLayout({
   subtitle,
   badge,
   badgeIcon: BadgeIcon = Shield,
+  app,
   children,
 }: LegalLayoutProps) {
   const location = useLocation();
+  const pathname = location.pathname.toLowerCase();
+
+  // Robust detection of active app
+  const isMeowoirs = app === "meowoirs" || pathname.includes("meowoirs");
+  const isAppsRoute = pathname.startsWith("/apps/");
+
+  const meowoirsLegalLinks: LegalLinkItem[] = [
+    {
+      name: "Meowoirs Privacy Policy",
+      path: isAppsRoute ? "/apps/meowoirs/privacy" : "/privacy/meowoirs",
+      matchPaths: ["/privacy/meowoirs", "/apps/meowoirs/privacy"],
+      icon: FileText,
+    },
+    {
+      name: "Meowoirs Terms of Service",
+      path: isAppsRoute ? "/apps/meowoirs/terms" : "/terms/meowoirs",
+      matchPaths: ["/terms/meowoirs", "/apps/meowoirs/terms"],
+      icon: FileText,
+    },
+    {
+      name: "Meowoirs Veterinary Disclaimer",
+      path: isAppsRoute ? "/apps/meowoirs/disclaimer" : "/disclaimer/meowoirs",
+      matchPaths: ["/disclaimer/meowoirs", "/apps/meowoirs/disclaimer"],
+      icon: AlertTriangle,
+    },
+    { name: "Contact Support", path: "/contact", matchPaths: ["/contact"], icon: Mail },
+  ];
+
+  const vitacaseLegalLinks: LegalLinkItem[] = [
+    {
+      name: "VitaCase Privacy Policy",
+      path: isAppsRoute ? "/apps/vitacase/privacy" : "/privacy/vitacase",
+      matchPaths: ["/privacy/vitacase", "/apps/vitacase/privacy"],
+      icon: FileText,
+    },
+    {
+      name: "VitaCase Terms & Conditions",
+      path: isAppsRoute ? "/apps/vitacase/terms" : "/terms/vitacase",
+      matchPaths: ["/terms/vitacase", "/apps/vitacase/terms"],
+      icon: FileText,
+    },
+    {
+      name: "VitaCase Medical Disclaimer",
+      path: isAppsRoute ? "/apps/vitacase/disclaimer" : "/disclaimer/vitacase",
+      matchPaths: ["/disclaimer/vitacase", "/apps/vitacase/disclaimer"],
+      icon: AlertTriangle,
+    },
+    { name: "Contact Support", path: "/contact", matchPaths: ["/contact"], icon: Mail },
+  ];
+
+  const legalLinks = isMeowoirs ? meowoirsLegalLinks : vitacaseLegalLinks;
+  const alternateAppName = isMeowoirs ? "VitaCase" : "Meowoirs";
+  const alternateAppPath = isMeowoirs
+    ? (isAppsRoute ? "/apps/vitacase/privacy" : "/privacy/vitacase")
+    : (isAppsRoute ? "/apps/meowoirs/privacy" : "/privacy/meowoirs");
+
+  const checkIsActive = (item: LegalLinkItem) => {
+    if (item.matchPaths && item.matchPaths.includes(pathname)) return true;
+    return pathname === item.path;
+  };
 
   return (
-    <main id="main-content" className="flex-grow pt-32 pb-32 px-6 max-w-[1200px] mx-auto w-full relative">
+    <main id="main-content" className="flex-grow pt-36 sm:pt-40 md:pt-44 pb-32 px-6 max-w-[1200px] mx-auto w-full relative">
       {/* Background Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-brand-500/10 rounded-full blur-[160px] pointer-events-none -z-10" />
 
@@ -52,17 +114,26 @@ export function LegalLayout({
 
       {/* Mobile Back Link & Horizontal Selector */}
       <div className="lg:hidden mb-6 flex flex-col gap-3">
-        <Link
-          to="/privacy"
-          className="inline-flex items-center gap-2 text-xs font-semibold text-gray-300 hover:text-white transition-colors py-2 px-3.5 rounded-xl glass self-start min-h-[40px]"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          <span>All Applications</span>
-        </Link>
+        <div className="flex items-center justify-between gap-3">
+          <Link
+            to="/privacy"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-gray-300 hover:text-white transition-colors py-2 px-3.5 rounded-xl glass self-start min-h-[40px]"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Legal Center</span>
+          </Link>
+          <Link
+            to={alternateAppPath}
+            className="inline-flex items-center gap-1.5 text-xs text-brand-300 hover:text-white transition-colors py-2 px-3 rounded-xl glass"
+          >
+            <ArrowRightLeft className="w-3 h-3" />
+            <span>Switch to {alternateAppName}</span>
+          </Link>
+        </div>
         <div className="overflow-x-auto pb-2 hide-scrollbar">
           <div className="flex items-center gap-2 w-max px-1">
             {legalLinks.map((item) => {
-              const isActive = location.pathname === item.path;
+              const isActive = checkIsActive(item);
               return (
                 <Link
                   key={item.path}
@@ -94,16 +165,17 @@ export function LegalLayout({
               className="inline-flex items-center gap-2 text-xs font-semibold text-gray-400 hover:text-white transition-colors py-2 px-3 rounded-lg hover:bg-white/5 w-full"
             >
               <ArrowLeft className="w-3.5 h-3.5 text-brand-300" />
-              <span>Back to App Selection</span>
+              <span>Back to Legal Center</span>
             </Link>
 
-            <div className="text-xs font-bold uppercase tracking-widest text-gray-400 px-3 pt-2 border-t border-white/[0.06]">
-              VitaCase Legal
+            <div className="text-xs font-bold uppercase tracking-widest text-gray-400 px-3 pt-2 border-t border-white/[0.06] flex items-center justify-between">
+              <span>{isMeowoirs ? "MEOWOIRS LEGAL" : "VITACASE LEGAL"}</span>
+              <span className="text-[10px] text-accent-400 font-mono">v1.0</span>
             </div>
 
-            <nav className="space-y-1.5" aria-label="Legal pages">
+            <nav className="space-y-1.5" aria-label={isMeowoirs ? "Meowoirs Legal Pages" : "VitaCase Legal Pages"}>
               {legalLinks.map((item) => {
-                const isActive = location.pathname === item.path;
+                const isActive = checkIsActive(item);
                 return (
                   <Link
                     key={item.path}
@@ -135,6 +207,20 @@ export function LegalLayout({
                 );
               })}
             </nav>
+
+            {/* Quick switcher to alternate app */}
+            <div className="pt-3 border-t border-white/[0.06] px-3">
+              <Link
+                to={alternateAppPath}
+                className="flex items-center justify-between text-xs text-gray-400 hover:text-white transition-colors group p-2 rounded-lg hover:bg-white/[0.03]"
+              >
+                <div className="flex items-center gap-2">
+                  <ArrowRightLeft className="w-3.5 h-3.5 text-brand-400 group-hover:rotate-180 transition-transform duration-300" />
+                  <span>View {alternateAppName} Legal</span>
+                </div>
+                <ChevronRight className="w-3 h-3 text-gray-500" />
+              </Link>
+            </div>
 
             <div className="pt-4 border-t border-white/[0.06] px-3">
               <p className="text-xs text-gray-400 leading-relaxed">

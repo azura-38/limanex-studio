@@ -76,17 +76,17 @@ export function Footer() {
               <ul className="space-y-2.5 text-sm">
                 <li>
                   <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
-                    Privacy Policy
+                    Legal Center
                   </Link>
                 </li>
                 <li>
-                  <Link to="/terms/vitacase" className="text-gray-400 hover:text-white transition-colors duration-200">
-                    Terms &amp; Conditions
+                  <Link to="/privacy/meowoirs" className="text-gray-400 hover:text-white transition-colors duration-200">
+                    Meowoirs Legal
                   </Link>
                 </li>
                 <li>
-                  <Link to="/disclaimer/vitacase" className="text-gray-400 hover:text-white transition-colors duration-200">
-                    Disclaimer
+                  <Link to="/privacy/vitacase" className="text-gray-400 hover:text-white transition-colors duration-200">
+                    VitaCase Legal
                   </Link>
                 </li>
                 <li>

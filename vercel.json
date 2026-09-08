@@ -31,13 +31,19 @@
       ]
     },
     {
-      "source": "/(favicon\\.svg|favicon-.*\\.png|apple-touch-icon\\.png|android-chrome-.*\\.png)",
+      "source": "/(favicon\\.ico|favicon\\.svg|favicon-.*\\.png|apple-touch-icon\\.png|android-chrome-.*\\.png|.*\\.webp)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/videos/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/((?!api|_next|assets|screenshots|fonts|ads\\.txt|app-ads\\.txt|favicon\\.svg|favicon-.*\\.png|apple-touch-icon\\.png|android-chrome-.*\\.png|robots\\.txt|sitemap\\.xml|manifest\\.webmanifest|browserconfig\\.xml|og-image\\.png).*)", "destination": "/index.html" }
+    { "source": "/((?!api|_next|assets|screenshots|videos|fonts|ads\\.txt|app-ads\\.txt|favicon.*|apple-touch-icon\\.png|android-chrome-.*\\.png|robots\\.txt|sitemap\\.xml|manifest\\.webmanifest|browserconfig\\.xml|og-image\\.png|.*\\.(?:png|webp|svg|ico|mp4|webm)).*)", "destination": "/index.html" }
   ]
 }

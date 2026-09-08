@@ -402,7 +402,7 @@ export default function AppDetail() {
                 <h3 className="text-xl font-bold text-white mb-4">Legal &amp; Privacy Information</h3>
                 <p className="text-sm text-gray-400 leading-relaxed mb-6">
                   {app.slug === "meowoirs"
-                    ? "Review complete policies governing Meowoirs offline-first local storage, photo privacy, and terms of service."
+                    ? "Review complete policies governing Meowoirs offline-first local storage, photo privacy, terms of service, and veterinary disclaimer."
                     : "Review complete policies governing VitaCase data storage, medication reminders, and terms of service."}
                 </p>
               </div>
@@ -415,6 +415,10 @@ export default function AppDetail() {
                     <span className="text-gray-600">•</span>
                     <Link to="/terms/meowoirs" className="text-brand-300 hover:text-white underline underline-offset-4 transition">
                       Terms of Service
+                    </Link>
+                    <span className="text-gray-600">•</span>
+                    <Link to="/disclaimer/meowoirs" className="text-brand-300 hover:text-white underline underline-offset-4 transition">
+                      Veterinary Disclaimer
                     </Link>
                   </>
                 ) : (

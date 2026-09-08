@@ -11,7 +11,7 @@ export default function Privacy() {
   });
 
   return (
-    <main id="main-content" className="flex-grow pt-32 pb-32 px-6 max-w-[1100px] mx-auto w-full relative">
+    <main id="main-content" className="flex-grow pt-36 sm:pt-40 md:pt-44 pb-32 px-6 max-w-[1100px] mx-auto w-full relative">
       <StructuredData
         data={[
           getOrganizationSchema(),
@@ -176,6 +176,19 @@ export default function Privacy() {
                   <FileText className="w-4 h-4 text-accent-400" aria-hidden="true" />
                   <span className="text-sm font-medium text-gray-200 group-hover/doc:text-white">
                     Meowoirs Terms of Service
+                  </span>
+                </div>
+                <ChevronRight className="w-4 h-4 text-gray-400 group-hover/doc:translate-x-0.5 transition-transform" />
+              </Link>
+
+              <Link
+                to="/disclaimer/meowoirs"
+                className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.06] transition-all group/doc"
+              >
+                <div className="flex items-center gap-3">
+                  <AlertTriangle className="w-4 h-4 text-yellow-400" aria-hidden="true" />
+                  <span className="text-sm font-medium text-gray-200 group-hover/doc:text-white">
+                    Meowoirs Veterinary Disclaimer
                   </span>
                 </div>
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover/doc:translate-x-0.5 transition-transform" />

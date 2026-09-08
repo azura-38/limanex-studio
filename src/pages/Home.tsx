@@ -34,6 +34,7 @@ export default function Home() {
   const appSlides = [
     {
       id: "vitacase-overview",
+      category: "App",
       badge: "Smart Health Tracking",
       status: "Available Now",
       name: "VitaCase",
@@ -58,6 +59,7 @@ export default function Home() {
     },
     {
       id: "meowoirs-overview",
+      category: "App",
       badge: "Cat Memory Journal",
       status: "New Release",
       name: "Meowoirs",
@@ -69,7 +71,7 @@ export default function Home() {
       features: [
         "Dedicated Cat Profiles (Home & Street)",
         "Daily Photo & Note Journaling",
-        "100% Offline-First & Private SQLite storage",
+        "Dual-Perspective Mood Reflections",
       ],
       screenshot: "/screenshots/meowoirs_1_card.webp",
       screenshotAlt: "Meowoirs app — cat profiles and memory timeline",
@@ -81,81 +83,10 @@ export default function Home() {
       shotIndex: 0,
     },
     {
-      id: "meowoirs-mood",
-      badge: "Dual Mood Reflection",
-      status: "New Release",
-      name: "Meowoirs Moods",
-      tagline: "Emotional Reflection",
-      title: "Capture Feelings on Both Sides of Every Memory",
-      short_description: "Record how your cat felt alongside your own emotional reflection to remember how each moment felt.",
-      description:
-        "Meowoirs allows you to pair your cat's mood with your own reflection for every journal entry, creating an authentic timeline of your shared bond with zero external tracking.",
-      features: [
-        "Dual-perspective mood journaling",
-        "Chronological memory feed",
-        "No accounts or external data tracking",
-      ],
-      screenshot: "/screenshots/meowoirs_2.webp",
-      screenshotAlt: "Meowoirs app — emotional mood reflections and daily cat stories",
-      playstore: "https://play.google.com/store/apps/details?id=com.limanex.meowoirs",
-      link: "/apps/meowoirs",
-      linkLabel: "View Mood Reflections",
-      icon: Sparkles,
-      iconBg: "from-purple-500 to-pink-500",
-      shotIndex: 1,
-    },
-    {
-      id: "vitacase-reminders",
-      badge: "Smart Reminders",
-      status: "Available Now",
-      name: "VitaCase Reminders",
-      tagline: "Automated Treatment Alerts",
-      title: "Never Miss a Dose with Smart Reminders",
-      short_description: "Stay on track with your treatments. Smart alerts ensure you never miss a dose.",
-      description:
-        "Customizable medication schedules, intelligent appointment alerts, and automated doctor visit notifications built with zero latency and privacy-first architecture.",
-      features: [
-        "Intelligent medication dosage schedules",
-        "Doctor appointment notifications",
-        "100% offline & encrypted on-device",
-      ],
-      screenshot: "/screenshots/vitacase_4.webp",
-      screenshotAlt: "VitaCase app — Never miss what matters with medicine reminders",
-      playstore: "https://play.google.com/store/apps/details?id=com.limanex.vitacase",
-      link: "/apps/vitacase",
-      linkLabel: "View Reminders",
-      icon: Smartphone,
-      iconBg: "from-accent-500 to-cyan-400",
-      shotIndex: 3,
-    },
-    {
-      id: "vitacase-trends",
-      badge: "Health Analytics",
-      status: "Available Now",
-      name: "VitaCase Trends",
-      tagline: "Comprehensive Health History",
-      title: "See the Big Picture of Your Health",
-      short_description: "View your data over time. Spot trends and share comprehensive history with your doctor.",
-      description:
-        "Simple explanations of complex medical results. Compare laboratory values over seasons and export comprehensive reports directly to your healthcare provider.",
-      features: [
-        "Multi-year health trend visualization",
-        "Understand what your numbers actually mean",
-        "Doctor-ready summary exports",
-      ],
-      screenshot: "/screenshots/vitacase_3.webp",
-      screenshotAlt: "VitaCase app — Find what matters when you need it",
-      playstore: "https://play.google.com/store/apps/details?id=com.limanex.vitacase",
-      link: "/apps/vitacase",
-      linkLabel: "View Analytics",
-      icon: Sparkles,
-      iconBg: "from-brand-400 to-purple-600",
-      shotIndex: 2,
-    },
-    {
       id: "block-dimension",
+      category: "Game",
       badge: "Spatial 3D Engine",
-      status: "In Development",
+      status: "Coming Soon",
       name: "Block Dimension",
       tagline: "Spatial Physics & Architecture",
       title: "Immersive Spatial Gaming",
@@ -391,6 +322,13 @@ export default function Home() {
                 >
                   <span className={`w-1.5 h-1.5 rounded-full ${isActive ? "bg-accent-400" : "bg-gray-500"}`} />
                   <span>{slide.name}</span>
+                  <span className={`text-[10px] uppercase font-mono px-1.5 py-0.5 rounded-md ${
+                    slide.category === "Game"
+                      ? "bg-purple-500/15 text-purple-300"
+                      : "bg-brand-500/10 text-brand-300"
+                  }`}>
+                    {slide.category}
+                  </span>
                 </button>
               );
             })}

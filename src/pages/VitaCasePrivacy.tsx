@@ -50,6 +50,7 @@ export default function VitaCasePrivacy() {
         subtitle="Last Updated — May 26, 2026"
         badge="Data Protection & Privacy"
         badgeIcon={Shield}
+        app="vitacase"
       >
         <div className="mb-8 pb-6 border-b border-white/[0.08] flex items-center justify-between">
           <Link to="/privacy" className="inline-flex items-center gap-2 text-xs font-semibold text-gray-400 hover:text-white transition-colors group min-h-[44px]">

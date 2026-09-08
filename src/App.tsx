@@ -24,6 +24,8 @@ const VitaCaseTerms = lazy(() => import("./pages/VitaCaseTerms"));
 const VitaCaseDisclaimer = lazy(() => import("./pages/VitaCaseDisclaimer"));
 const MeowoirsPrivacy = lazy(() => import("./pages/MeowoirsPrivacy"));
 const MeowoirsTerms = lazy(() => import("./pages/MeowoirsTerms"));
+const MeowoirsDisclaimer = lazy(() => import("./pages/MeowoirsDisclaimer"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Memoized studio background with ambient glow & subtle cosmic grid
 const StudioAtmosphere = memo(function StudioAtmosphere() {
@@ -87,7 +89,15 @@ export default function App() {
               <Route path="/disclaimer/vitacase" element={<VitaCaseDisclaimer />} />
               <Route path="/privacy/meowoirs" element={<MeowoirsPrivacy />} />
               <Route path="/terms/meowoirs" element={<MeowoirsTerms />} />
+              <Route path="/disclaimer/meowoirs" element={<MeowoirsDisclaimer />} />
+              <Route path="/apps/meowoirs/privacy" element={<MeowoirsPrivacy />} />
+              <Route path="/apps/meowoirs/terms" element={<MeowoirsTerms />} />
+              <Route path="/apps/meowoirs/disclaimer" element={<MeowoirsDisclaimer />} />
+              <Route path="/apps/vitacase/privacy" element={<VitaCasePrivacy />} />
+              <Route path="/apps/vitacase/terms" element={<VitaCaseTerms />} />
+              <Route path="/apps/vitacase/disclaimer" element={<VitaCaseDisclaimer />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
           <Footer />
