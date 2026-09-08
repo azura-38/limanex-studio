@@ -37,9 +37,10 @@ const meowoirsFAQs = [
 
 export default function MeowoirsPrivacy() {
   useSEO({
-    title: "Meowoirs Privacy Policy — Limanex Studio",
+    title: "Meowoirs Privacy Policy | LIMANEX",
     description:
-      "Official Privacy Policy for Meowoirs by Limanex Studio. Learn how Meowoirs uses a local-first offline architecture to keep your cat journal, photos, and memories private on your device.",
+      "Privacy Policy for Meowoirs, the personal memory journal for cat stories by LIMANEX.",
+    canonical: "https://limanexstudio.com/privacy/meowoirs",
   });
 
   return (

@@ -25,9 +25,10 @@ const meowoirsTermsFAQs = [
 
 export default function MeowoirsTerms() {
   useSEO({
-    title: "Meowoirs Terms of Service — Limanex Studio",
+    title: "Meowoirs Terms of Service | LIMANEX",
     description:
-      "Official Terms of Service for Meowoirs by Limanex Studio. Review the complete terms, acceptable use policies, ownership rules, and disclaimers governing the Meowoirs application.",
+      "Terms of Service for Meowoirs, the personal memory journal for cat stories by LIMANEX.",
+    canonical: "https://limanexstudio.com/terms/meowoirs",
   });
 
   return (

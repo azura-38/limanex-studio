@@ -81,7 +81,12 @@ export function Footer() {
                 </li>
                 <li>
                   <Link to="/privacy/meowoirs" className="text-gray-400 hover:text-white transition-colors duration-200">
-                    Meowoirs Legal
+                    Meowoirs Privacy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/terms/meowoirs" className="text-gray-400 hover:text-white transition-colors duration-200">
+                    Meowoirs Terms
                   </Link>
                 </li>
                 <li>

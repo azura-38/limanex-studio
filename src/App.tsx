@@ -84,6 +84,7 @@ export default function App() {
               <Route path="/ai" element={<AI />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/legal" element={<Privacy />} />
+              <Route path="/terms" element={<MeowoirsTerms />} />
               <Route path="/privacy/vitacase" element={<VitaCasePrivacy />} />
               <Route path="/terms/vitacase" element={<VitaCaseTerms />} />
               <Route path="/disclaimer/vitacase" element={<VitaCaseDisclaimer />} />
