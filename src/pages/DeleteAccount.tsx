@@ -2,19 +2,17 @@ import { Link } from 'react-router-dom';
 import { 
   Trash2, 
   ShieldCheck, 
-  Smartphone, 
   Mail, 
   ArrowLeft, 
   FileText, 
-  AlertCircle,
   HardDrive
 } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';
 
 export default function DeleteAccount() {
   useSEO({
-    title: 'Account & Data Deletion — VitaCase | LIMANEX STUDIO',
-    description: 'Instructions for deleting personal data, encrypted documents, and diagnostic telemetry from VitaCase.',
+    title: 'Data Deletion Instructions — VitaCase | LIMANEX',
+    description: 'Instructions for deleting personal data, local encrypted documents, and diagnostic telemetry from VitaCase by LIMANEX.',
     canonical: 'https://limanexstudio.com/delete-account',
   });
 
@@ -30,10 +28,10 @@ export default function DeleteAccount() {
           <span>Data Custody &amp; Privacy</span>
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-3">
-          Account &amp; Data Deletion
+          Data Deletion Instructions
         </h1>
         <p className="text-xs sm:text-sm uppercase tracking-[0.16em] text-gray-400 font-semibold">
-          VitaCase Personal Health Organizer
+          VitaCase Personal Health Organizer &bull; Published by LIMANEX
         </p>
       </header>
 
@@ -63,13 +61,13 @@ export default function DeleteAccount() {
             </div>
             <div>
               <h2 className="text-xl font-bold text-white mb-2">
-                Local-First Architecture: No Remote Cloud Accounts
+                Local Storage: No Remote Cloud Accounts
               </h2>
               <p className="text-sm text-gray-300 leading-relaxed">
-                VitaCase is built with a <strong>local-first, offline-by-design architecture</strong>. The application does not require or maintain cloud user accounts, central registration, usernames, or remote passwords.
+                VitaCase operates with an on-device data architecture. The application does not maintain cloud user accounts, central registration, usernames, or remote passwords.
               </p>
               <p className="text-sm text-gray-300 leading-relaxed mt-3">
-                All personal records, medical documents, lab results, prescriptions, vitals, and medication schedules are stored <strong>strictly on your personal device</strong> inside an isolated sandbox, encrypted locally using authenticated <strong>AES-256-GCM</strong>. Limanex Software does not host, possess, or have access to copies of your vault documents.
+                All personal health records, documents, lab results, prescriptions, vitals, and medication schedules are stored <strong>locally on your personal device</strong> in an encrypted vault (AES-256-GCM). LIMANEX does not operate remote user document servers or possess copies of your vault records.
               </p>
             </div>
           </div>
@@ -86,18 +84,18 @@ export default function DeleteAccount() {
             <div className="p-5 rounded-xl bg-white/[0.03] border border-white/[0.06]">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-6 h-6 rounded-full bg-brand-500/20 text-brand-300 flex items-center justify-center text-xs font-bold">1</span>
-                <h3 className="font-bold text-white text-base">In-App Complete Data Wipe (&ldquo;Wipe All Data&rdquo; / &ldquo;Verileri Temizle&rdquo;)</h3>
+                <h3 className="font-bold text-white text-base">In-App Complete Data Wipe (&ldquo;Clear All Data&rdquo; / &ldquo;Tüm Verileri Temizle&rdquo;)</h3>
               </div>
               <p className="text-sm text-gray-300 leading-relaxed mb-3">
-                You can immediately purge all data directly from inside the VitaCase app:
+                You can immediately purge all local data directly from inside VitaCase:
               </p>
               <ol className="list-decimal pl-6 text-sm text-gray-300 space-y-1.5">
                 <li>Open VitaCase on your mobile device.</li>
-                <li>Tap <strong>Settings</strong> (gear icon) &rarr; select <strong>Security &amp; Data</strong>.</li>
-                <li>Tap <strong>&ldquo;Wipe All Data&rdquo; (Verileri Temizle)</strong> and confirm the prompt.</li>
+                <li>Tap <strong>Settings</strong> (gear icon) &rarr; navigate to <strong>Data &amp; Security</strong> (&ldquo;Veri ve Güvenlik&rdquo;).</li>
+                <li>Tap <strong>&ldquo;Clear All Data&rdquo; (Tüm Verileri Temizle)</strong> and confirm the confirmation prompt.</li>
               </ol>
               <p className="text-xs text-gray-400 mt-3 pt-3 border-t border-white/[0.06]">
-                This action immediately deletes the local Sembast database, purges all stored files from the encrypted document vault, wipes the AES-256 master key from the device keystore (<code>FlutterSecureStorage</code>), and cancels all local notification reminders.
+                This action immediately deletes the local database, purges all stored files from the encrypted document vault, wipes the encryption key from hardware secure storage (<code>FlutterSecureStorage</code>), and cancels all local notification reminders.
               </p>
             </div>
 
@@ -107,7 +105,10 @@ export default function DeleteAccount() {
                 <h3 className="font-bold text-white text-base">Application Uninstallation</h3>
               </div>
               <p className="text-sm text-gray-300 leading-relaxed">
-                Uninstalling VitaCase through your operating system settings (Android Application Manager or iOS Settings) permanently removes the application&apos;s isolated private data storage sandbox. All encrypted databases, cached files, and local configuration are immediately and irrecoverably erased by your device OS.
+                Uninstalling VitaCase through your operating system settings (Android Application Manager or iOS Settings) permanently removes the application&apos;s isolated local sandbox. 
+              </p>
+              <p className="text-xs text-gray-400 mt-2">
+                <em>Note on Operating System Backups:</em> If you have enabled Android Auto Backup or Google Drive cloud backup on your device, backup snapshots managed by the operating system follow your Google Account settings.
               </p>
             </div>
 
@@ -117,7 +118,7 @@ export default function DeleteAccount() {
                 <h3 className="font-bold text-white text-base">Selective Manual Deletion</h3>
               </div>
               <p className="text-sm text-gray-300 leading-relaxed">
-                You can also delete individual records at any time without resetting the entire app. Simply open or swipe any document, medication, or appointment entry and tap &ldquo;Delete&rdquo; to permanently remove that specific item from local storage.
+                You can delete individual records at any time without resetting the entire app. Open or swipe any document, medication, or appointment entry and tap &ldquo;Delete&rdquo; to permanently remove that specific item from local storage.
               </p>
             </div>
           </div>
@@ -127,18 +128,13 @@ export default function DeleteAccount() {
         <div className="glass-card p-6 sm:p-8 border border-white/[0.08] rounded-2xl space-y-4">
           <h2 className="text-xl font-bold text-white flex items-center gap-2.5">
             <Mail className="w-5 h-5 text-accent-400" />
-            Diagnostic Telemetry &amp; Formal GDPR / KVKK Requests
+            Diagnostic Telemetry &amp; Privacy Inquiries
           </h2>
           <p className="text-sm text-gray-300 leading-relaxed">
-            While your documents and personal records never leave your physical device, VitaCase uses vetted third-party SDKs (Google Firebase Analytics, Firebase Crashlytics, and Sentry) strictly for crash diagnostics and aggregated performance metrics.
+            While your documents and personal records remain stored locally on your physical device, VitaCase uses third-party SDKs (Google Firebase Analytics, Firebase Crashlytics, and Sentry) for crash diagnostics and aggregated stability metrics.
           </p>
-          <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] text-xs text-gray-400 space-y-1.5">
-            <p>&bull; <strong>Firebase Analytics:</strong> Retained for 2 to 14 months per Google standard cycles.</p>
-            <p>&bull; <strong>Firebase Crashlytics:</strong> Crash traces retained for 90 days.</p>
-            <p>&bull; <strong>Sentry:</strong> Diagnostic error traces retained for 30 to 90 days.</p>
-          </div>
           <p className="text-sm text-gray-300 leading-relaxed">
-            To submit a formal deletion request regarding third-party diagnostic telemetry under GDPR (Art. 17) or Türkiye KVKK (m. 11), contact us directly:
+            To submit an inquiry or formal deletion request regarding third-party diagnostic telemetry under GDPR or Türkiye KVKK:
           </p>
           <div className="p-4 rounded-xl bg-brand-500/10 border border-brand-500/20">
             <p className="text-sm text-white font-medium">
@@ -148,7 +144,7 @@ export default function DeleteAccount() {
               <strong>Subject:</strong> Data Deletion Request — VitaCase
             </p>
             <p className="text-xs text-gray-400 mt-2">
-              *Because VitaCase does not collect names, email addresses, or cloud accounts, please provide your pseudonymous installation UUID (<code>app_user_uid</code> found in App Settings &rarr; About) so we can locate any related diagnostic logs in developer consoles.
+              *Because VitaCase does not maintain user accounts or require email registration, LIMANEX does not store personal profiles linking diagnostic telemetry to individual user names. Contact us at the verified email above for assistance.
             </p>
           </div>
         </div>

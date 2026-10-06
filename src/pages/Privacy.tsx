@@ -85,20 +85,7 @@ export default function Privacy() {
                 <div className="flex items-center gap-3">
                   <Shield className="w-4 h-4 text-brand-300" aria-hidden="true" />
                   <span className="text-sm font-medium text-gray-200 group-hover/doc:text-white">
-                    VitaCase Privacy Policy &amp; GDPR
-                  </span>
-                </div>
-                <ChevronRight className="w-4 h-4 text-gray-400 group-hover/doc:translate-x-0.5 transition-transform" />
-              </Link>
-
-              <Link
-                to="/terms/vitacase"
-                className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.06] transition-all group/doc"
-              >
-                <div className="flex items-center gap-3">
-                  <FileText className="w-4 h-4 text-accent-400" aria-hidden="true" />
-                  <span className="text-sm font-medium text-gray-200 group-hover/doc:text-white">
-                    VitaCase Terms of Use
+                    VitaCase Terms &amp; Privacy (Unified Master)
                   </span>
                 </div>
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover/doc:translate-x-0.5 transition-transform" />
@@ -111,7 +98,7 @@ export default function Privacy() {
                 <div className="flex items-center gap-3">
                   <Trash2 className="w-4 h-4 text-red-400" aria-hidden="true" />
                   <span className="text-sm font-medium text-gray-200 group-hover/doc:text-white">
-                    Account &amp; Data Deletion Instructions
+                    Data Deletion Instructions
                   </span>
                 </div>
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover/doc:translate-x-0.5 transition-transform" />
@@ -123,7 +110,7 @@ export default function Privacy() {
             to="/privacy/vitacase"
             className="inline-flex items-center justify-center gap-2.5 w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 hover:brightness-110 text-white font-semibold text-sm transition-all shadow-md shadow-brand-500/20"
           >
-            <span>Open VitaCase Documents</span>
+            <span>Open Terms &amp; Privacy</span>
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
         </div>

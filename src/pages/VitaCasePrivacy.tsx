@@ -5,15 +5,15 @@ import { useSEO } from '../hooks/useSEO';
 
 export default function VitaCasePrivacy() {
   useSEO({
-    title: 'VitaCase Privacy Policy — LIMANEX STUDIO',
-    description: 'Official VitaCase Privacy Policy, GDPR & Türkiye KVKK disclosures. Local-first encrypted health storage with zero cloud tracking.',
+    title: 'VitaCase Privacy Policy — LIMANEX',
+    description: 'Official VitaCase Privacy Policy, GDPR & Türkiye KVKK disclosures. Published by LIMANEX.',
     canonical: 'https://limanexstudio.com/privacy/vitacase',
   });
 
   return (
     <LegalLayout
       title="VitaCase Privacy Policy"
-      subtitle="TERMS & PRIVACY — LAST UPDATED: OCTOBER 6, 2026"
+      subtitle="TERMS & PRIVACY — PUBLISHED BY LIMANEX — LAST UPDATED: OCTOBER 6, 2026"
       badge="Canonical Legal Master"
       badgeIcon={Shield}
       app="vitacase"

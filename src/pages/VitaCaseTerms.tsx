@@ -5,15 +5,15 @@ import { useSEO } from '../hooks/useSEO';
 
 export default function VitaCaseTerms() {
   useSEO({
-    title: 'VitaCase Terms of Use — LIMANEX STUDIO',
-    description: 'Official Terms of Use for VitaCase personal health organizer by LIMANEX STUDIO. Agreement governing on-device vault usage.',
+    title: 'VitaCase Terms of Use — LIMANEX',
+    description: 'Official Terms of Use for VitaCase personal health organizer, published by LIMANEX.',
     canonical: 'https://limanexstudio.com/terms/vitacase',
   });
 
   return (
     <LegalLayout
       title="VitaCase Terms of Use"
-      subtitle="TERMS & PRIVACY — LAST UPDATED: OCTOBER 6, 2026"
+      subtitle="TERMS & PRIVACY — PUBLISHED BY LIMANEX — LAST UPDATED: OCTOBER 6, 2026"
       badge="Canonical Legal Master"
       badgeIcon={FileText}
       app="vitacase"

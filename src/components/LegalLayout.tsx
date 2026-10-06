@@ -58,20 +58,21 @@ export function LegalLayout({
 
   const vitacaseLegalLinks: LegalLinkItem[] = [
     {
-      name: "VitaCase Privacy Policy",
+      name: "Terms & Privacy",
       path: isAppsRoute ? "/apps/vitacase/privacy" : "/privacy/vitacase",
-      matchPaths: ["/privacy/vitacase", "/apps/vitacase/privacy"],
+      matchPaths: [
+        "/privacy/vitacase",
+        "/terms/vitacase",
+        "/disclaimer/vitacase",
+        "/apps/vitacase/privacy",
+        "/apps/vitacase/terms",
+        "/apps/vitacase/disclaimer"
+      ],
       icon: Shield,
     },
     {
-      name: "VitaCase Terms of Use",
-      path: isAppsRoute ? "/apps/vitacase/terms" : "/terms/vitacase",
-      matchPaths: ["/terms/vitacase", "/apps/vitacase/terms"],
-      icon: FileText,
-    },
-    {
-      name: "Data Retention & Deletion",
-      path: "/delete-account",
+      name: "Data Deletion Instructions",
+      path: isAppsRoute ? "/apps/vitacase/delete-account" : "/delete-account",
       matchPaths: ["/delete-account", "/apps/vitacase/delete-account"],
       icon: Trash2,
     },

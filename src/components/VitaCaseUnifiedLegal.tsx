@@ -5,8 +5,7 @@ import {
   AlertTriangle, 
   Trash2, 
   Globe2,
-  Layers,
-  ChevronRight
+  Layers
 } from 'lucide-react';
 import clsx from 'clsx';
 
@@ -25,11 +24,10 @@ const SECTIONS: { id: LegalSectionId; anchor: string; title: string; shortTitle:
   { id: 'deletion', anchor: 'section-deletion', title: 'Section 5 — Data Deletion', shortTitle: 'Data Deletion', icon: Trash2 },
 ];
 
-export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'terms' }: VitaCaseUnifiedLegalProps) {
+export function VitaCaseUnifiedLegal({ initialSection = 'terms' }: VitaCaseUnifiedLegalProps) {
   const [activeSection, setActiveSection] = useState<LegalSectionId>(initialSection);
 
   useEffect(() => {
-    // If URL has a specific hash, scroll to it
     const hash = window.location.hash.replace('#', '');
     const matched = SECTIONS.find(s => s.anchor === hash || s.id === hash);
     if (matched) {
@@ -70,8 +68,8 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
               <Layers className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-white">VitaCase Unified Terms &amp; Privacy</h2>
-              <p className="text-xs text-gray-400">Canonical Document for Application &amp; Website</p>
+              <h2 className="text-lg font-bold text-white">VitaCase Terms &amp; Privacy</h2>
+              <p className="text-xs text-gray-400">Published by LIMANEX &bull; Canonical Master</p>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
@@ -85,7 +83,7 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
         </div>
 
         <p className="text-xs sm:text-sm text-gray-300 mt-4 leading-relaxed">
-          VitaCase operates on an <strong>offline-first, zero-cloud architecture</strong>. This single unified document incorporates our Terms of Use, Privacy Policy, General Data Protection Regulation (GDPR) disclosures, Türkiye KVKK Aydınlatma Bilgilendirmesi, Health Disclaimers, and Data Deletion procedures.
+          VitaCase is designed for on-device personal health record organization. This document consolidates our Terms of Use, Privacy Policy, General Data Protection Regulation (GDPR) disclosures, Türkiye KVKK Aydınlatma Bilgilendirmesi, Health Disclaimers, and Data Deletion procedures into a single unified legal experience.
         </p>
 
         {/* Section Quick Jump Pill Navigation */}
@@ -136,21 +134,21 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
           <div>
             <h3 className="text-lg font-bold text-white mb-2">1.1 Agreement to Terms</h3>
             <p>
-              These Terms of Use (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you (&ldquo;User&rdquo;, &ldquo;you&rdquo;) and <strong>Limanex Software</strong> (&ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), governing your access to and use of the VitaCase mobile application (the &ldquo;App&rdquo;, &ldquo;Service&rdquo;).
+              These Terms of Use (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you (&ldquo;User&rdquo;, &ldquo;you&rdquo;) and <strong>LIMANEX</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), governing your access to and use of the VitaCase mobile application (the &ldquo;App&rdquo;, &ldquo;Service&rdquo;).
             </p>
             <p className="mt-2">
-              By downloading, installing, accessing, or using VitaCase, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree with all of these Terms, you must immediately discontinue use and uninstall the App.
+              By downloading, installing, accessing, or using VitaCase, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree with all of these Terms, you must discontinue use and uninstall the App.
             </p>
           </div>
 
           <div>
             <h3 className="text-lg font-bold text-white mb-2">1.2 Description of Service</h3>
             <p>
-              VitaCase is a private, offline-first personal organization and document management tool that operates locally on your mobile device. Key capabilities include:
+              VitaCase is a private personal organization and document management tool that operates locally on your mobile device. Key capabilities include:
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1.5">
               <li><strong>Encrypted Document Vault:</strong> On-device organization of personal files, medical documents, prescriptions, lab reports, and receipts using local authenticated AES-256-GCM encryption.</li>
-              <li><strong>Medication &amp; Stock Tracking:</strong> Personal medication records, dosage schedules, stock quantities, and local reminder schedules.</li>
+              <li><strong>Medication &amp; Stock Tracking:</strong> Personal medication records, dosage schedules, stock quantities, and local reminder notifications.</li>
               <li><strong>Appointment Scheduling:</strong> Local calendar tracking for doctor visits, examinations, and medical follow-ups.</li>
               <li><strong>Health &amp; Physical Metrics:</strong> Local tracking of height, weight, BMI, and vital health logs.</li>
               <li><strong>Emergency &amp; Critical Info:</strong> Quick access to blood type, emergency contact numbers, and important health notes.</li>
@@ -199,21 +197,21 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
           <div>
             <h3 className="text-lg font-bold text-white mb-2">1.7 Backups &amp; Data Loss Disclaimer</h3>
             <p>
-              Because VitaCase operates offline without cloud synchronization, Limanex Software does not possess a copy of your files, documents, or cryptographic keys. If your device is damaged, lost, stolen, or wiped, your data cannot be recovered by Limanex Software. <strong>You are solely responsible for creating and maintaining independent, secure backups</strong> of all critical health records in a separate, secure location.
+              Because VitaCase operates locally on your device without central cloud synchronization, LIMANEX does not possess a copy of your files, documents, or cryptographic keys. If your device is damaged, lost, stolen, or wiped, your data cannot be recovered by LIMANEX. <strong>You are solely responsible for creating and maintaining independent, secure backups</strong> of all critical health records in a separate, secure location.
             </p>
           </div>
 
           <div>
             <h3 className="text-lg font-bold text-white mb-2">1.8 Device Security &amp; PIN Protection</h3>
             <p>
-              VitaCase offers an optional 6-digit PIN and device biometric lock to restrict unauthorized physical access on your device. Because VitaCase uses local cryptographic key derivation with no cloud bypass or server backdoor, <strong>Limanex Software cannot reset, bypass, or recover a forgotten PIN</strong>.
+              VitaCase offers an optional 6-digit PIN and device biometric lock to restrict unauthorized physical access on your device. Because VitaCase uses local cryptographic key derivation with no cloud bypass or server backdoor, <strong>LIMANEX cannot reset, bypass, or recover a forgotten PIN</strong>.
             </p>
           </div>
 
           <div>
             <h3 className="text-lg font-bold text-white mb-2">1.9 Third-Party Services &amp; Advertising</h3>
             <p>
-              The App integrates vetted third-party SDKs including Google AdMob (for advertisements), Google Firebase (Crashlytics for crash diagnostics, Analytics for aggregated usage metrics), and Sentry (for error reporting). These services operate under their own terms and privacy policies.
+              The App integrates third-party SDKs including Google AdMob (for advertisements), Google Firebase (Crashlytics for crash diagnostics, Analytics for aggregated usage metrics), and Sentry (for error reporting). These services operate under their own terms and privacy policies.
             </p>
           </div>
 
@@ -227,14 +225,14 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
           <div>
             <h3 className="text-lg font-bold text-white mb-2">1.11 Disclaimer of Warranties</h3>
             <p className="text-xs uppercase tracking-wide text-gray-400 bg-white/[0.02] p-4 rounded-xl border border-white/[0.06]">
-              THE APP IS PROVIDED ON AN &ldquo;AS-IS&rdquo; AND &ldquo;AS-AVAILABLE&rdquo; BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, LIMANEX SOFTWARE DISCLAIMS ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, AND NON-INFRINGEMENT.
+              THE APP IS PROVIDED ON AN &ldquo;AS-IS&rdquo; AND &ldquo;AS-AVAILABLE&rdquo; BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, LIMANEX DISCLAIMS ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, AND NON-INFRINGEMENT.
             </p>
           </div>
 
           <div>
             <h3 className="text-lg font-bold text-white mb-2">1.12 Limitation of Liability</h3>
             <p className="text-xs uppercase tracking-wide text-gray-400 bg-white/[0.02] p-4 rounded-xl border border-white/[0.06]">
-              TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL LIMANEX SOFTWARE BE LIABLE FOR ANY INDIRECT, CONSEQUENTIAL, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, DEVICE DAMAGE, MISSED APPOINTMENTS, MEDICATION ERRORS, OR PERSONAL INJURY.
+              TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL LIMANEX BE LIABLE FOR ANY INDIRECT, CONSEQUENTIAL, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, DEVICE DAMAGE, MISSED APPOINTMENTS, MEDICATION ERRORS, OR PERSONAL INJURY.
             </p>
           </div>
 
@@ -271,21 +269,21 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
 
         <div className="space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
           <div>
-            <h3 className="text-lg font-bold text-white mb-2">2.1 Information Architecture &amp; Local-First Security</h3>
+            <h3 className="text-lg font-bold text-white mb-2">2.1 Information Architecture &amp; Data Storage</h3>
             <p>
-              VitaCase operates on a <strong>local-first, privacy-by-design</strong> model:
+              VitaCase operates on a privacy-respecting local architecture:
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1.5">
-              <li><strong>No Remote User Accounts:</strong> There are no cloud accounts, central registrations, or remote logins.</li>
-              <li><strong>No Cloud Document Storage:</strong> Your documents, notes, appointments, medications, health measurements, and profile data are stored <strong>strictly on your terminal device</strong>. We have no remote access to your documents or files.</li>
-              <li><strong>On-Device Authenticated Encryption:</strong> Files and database records stored in the VitaCase vault are encrypted locally using authenticated <strong>AES-256-GCM</strong> encryption. Encryption keys are derived using PBKDF2 with cryptographic salts and stored in operating system hardware-backed secure storage (<code>FlutterSecureStorage</code> / Android Keystore / iOS Keychain).</li>
+              <li><strong>Local Document Vault:</strong> Your personal documents, medical notes, appointments, medications, health measurements, and profile entries are stored locally on your mobile device. LIMANEX does not maintain remote user accounts, usernames, or cloud document servers for user files.</li>
+              <li><strong>On-Device Authenticated Encryption:</strong> Files stored in the VitaCase vault are encrypted locally using authenticated <strong>AES-256-GCM</strong> encryption, with cryptographic keys stored in operating system hardware-backed secure storage (<code>FlutterSecureStorage</code> / Android Keystore / iOS Keychain).</li>
+              <li><strong>Off-Device Telemetry Distinction:</strong> While your health records and vault files remain on your device, limited technical diagnostics and ad requests may be transmitted off-device via secure TLS connections by third-party SDKs as described below.</li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-bold text-white mb-2">2.2 On-Device Sensitive Health Data</h3>
             <p>
-              VitaCase enables you to store health records, medications, and appointment details. This information is entered voluntarily by you and stays <strong>only on your device</strong> in encrypted local storage. We do <strong>not</strong> transmit, inspect, analyze, monetize, profile, or share your medical files or personal records. You are the sole custodian of your health information.
+              VitaCase enables you to store health records, medications, and appointment details. This information is entered voluntarily by you and stays on your device in encrypted local storage. We do <strong>not</strong> transmit, inspect, analyze, monetize, profile, or share your medical files or personal records. You are the sole custodian of your health information.
             </p>
           </div>
 
@@ -299,31 +297,31 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
           <div>
             <h3 className="text-lg font-bold text-white mb-2">2.4 Automatically Collected Technical Data &amp; SDK Telemetry</h3>
             <p>
-              While your documents and personal records never leave your device, the App integrates vetted third-party software development kits (SDKs) strictly for error monitoring, performance diagnostics, aggregated product analytics, and advertising:
+              While your documents and personal records remain stored locally on your device, the App integrates third-party software development kits (SDKs) strictly for error monitoring, performance diagnostics, aggregated product analytics, and advertising:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
               <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
                 <h4 className="font-bold text-white text-sm mb-1">1. Google Firebase Analytics</h4>
                 <p className="text-xs text-gray-400 leading-relaxed">
-                  Collects pseudonymous interaction metrics (e.g. screen visits, feature counters). <strong>No health data, medication names, dosages, or document files are ever logged.</strong>
+                  Collects pseudonymous interaction metrics (such as screen views and feature counters). <strong>No health data, medication names, dosages, or document files are ever logged.</strong>
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
                 <h4 className="font-bold text-white text-sm mb-1">2. Google Firebase Crashlytics</h4>
                 <p className="text-xs text-gray-400 leading-relaxed">
-                  Collects diagnostic stack traces, device model, and OS version at the time of a software crash to identify and fix software bugs.
+                  Collects diagnostic stack traces, device model, and OS version at the time of a software crash to identify and resolve stability issues.
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
                 <h4 className="font-bold text-white text-sm mb-1">3. Sentry (Functional Software, Inc.)</h4>
                 <p className="text-xs text-gray-400 leading-relaxed">
-                  Collects real-time application exceptions and error stack traces. Tagged with an anonymous, installation-specific random UUID (<code>app_user_uid</code>) to correlate errors.
+                  Collects real-time application exceptions and error stack traces to monitor software health and catch technical exceptions.
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
                 <h4 className="font-bold text-white text-sm mb-1">4. Google AdMob &amp; Google UMP</h4>
                 <p className="text-xs text-gray-400 leading-relaxed">
-                  Delivers in-app advertisements. In regions requiring consent (such as EEA/UK), advertising consent preferences are collected via the Google User Messaging Platform (UMP).
+                  Delivers in-app advertisements. In regions requiring consent (such as EEA/UK), advertising consent preferences are collected via the Google User Messaging Platform (UMP). Advertising consent does not conflate with diagnostic telemetry.
                 </p>
               </div>
             </div>
@@ -349,7 +347,7 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
           <div>
             <h3 className="text-lg font-bold text-white mb-2">2.7 Third-Party Retention Periods</h3>
             <p>
-              Firebase Analytics metrics are retained for 2 to 14 months; Firebase Crashlytics crash traces for 90 days; and Sentry error logs for 30 to 90 days. Local data on your device is retained until deleted by you.
+              Third-party providers retain diagnostic logs and event telemetry in accordance with their standard developer retention schedules and privacy policies (e.g. Google Firebase standard retention cycles and Sentry data retention policies). Local records on your device are retained until deleted by you.
             </p>
           </div>
 
@@ -370,9 +368,9 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
           <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
             <h3 className="text-base font-bold text-white mb-2">2.10 Data Controller Identity &amp; Contact Details</h3>
             <ul className="space-y-1.5 text-sm">
-              <li><strong>Data Controller:</strong> Limanex Software (Independent Software Developer)</li>
+              <li><strong>Developer &amp; Brand:</strong> LIMANEX</li>
               <li><strong>Contact Email:</strong> <a href="mailto:limanexsoftware@outlook.com" className="text-brand-300 underline underline-offset-4">limanexsoftware@outlook.com</a></li>
-              <li><strong>Corporate Status:</strong> Operating as an independent software developer. Formal corporate registration credentials (registered physical address, MERSİS, KEP) are in progress and will be posted upon corporate entity incorporation.</li>
+              <li><strong>Legal Notice:</strong> Official communication regarding privacy inquiries or data rights should be directed to the verified contact email above.</li>
             </ul>
           </div>
         </div>
@@ -404,20 +402,20 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
           <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
             <h3 className="text-lg font-bold text-white mb-2">3.1 Veri Sorumlusunun Kimliği ve Bilgileri</h3>
             <ul className="space-y-1.5 text-sm">
-              <li><strong>Veri Sorumlusu:</strong> Limanex Software (Bağımsız Yazılım Geliştirici &amp; Veri Sorumlusu)</li>
+              <li><strong>Veri Sorumlusu:</strong> LIMANEX (Geliştirici &amp; Veri Sorumlusu)</li>
               <li><strong>İletişim ve Başvuru E-posta:</strong> <a href="mailto:limanexsoftware@outlook.com" className="text-brand-300 underline underline-offset-4">limanexsoftware@outlook.com</a></li>
               <li><strong>Uygulama:</strong> VitaCase (Android / iOS)</li>
-              <li><strong>Kurumsal Sicil Bildirimi:</strong> Halihazırda bağımsız geliştirici faaliyeti yürütülmekte olup; tüzel kişilik tesis edilmesi, ticaret sicil/MERSİS ve KEP kayıtlarının tamamlanması akabinde ilgili sicil bilgileri bu bildirimde güncellenecektir. Tebligat ve yasal bildirimler yukarıdaki resmi iletişim e-postası üzerinden kabul edilmektedir.</li>
+              <li><strong>Bildirim:</strong> Faaliyetler LIMANEX geliştirici markası altında yürütülmektedir. Veri sorumlusuna yapılacak her türlü başvuru ve tebligat doğrudan yukarıdaki resmi iletişim e-postası üzerinden kabul edilmektedir.</li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-bold text-white mb-2">3.2 Yerel Depolama Mimarisi ve Kullanıcı Verilerinin Durumu</h3>
             <p>
-              VitaCase uygulaması, <strong>cihaz üzerinde yerel depolama (offline-first)</strong> ve <strong>uçtan uca yerel şifreleme (AES-256-GCM)</strong> prensibiyle çalışmaktadır:
+              VitaCase uygulaması, <strong>cihaz üzerinde yerel depolama</strong> ve <strong>uçtan uca yerel şifreleme (AES-256-GCM)</strong> prensibiyle çalışmaktadır:
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1.5">
-              <li><strong>Sağlık ve Belge Verileri:</strong> Uygulamaya kaydettiğiniz belgeler, tahlil sonuçları, reçeteler, ilaç listeleri, randevu notları ve sağlık ölçümleri <strong>Limanex Software sunucularına iletilmez, depolanmaz ve tarafımızca erişilemez</strong>. Verilerin zilyetliği ve denetimi tamamen kullanıcının kendisindedir.</li>
+              <li><strong>Sağlık ve Belge Verileri:</strong> Uygulamaya kaydettiğiniz belgeler, tahlil sonuçları, reçeteler, ilaç listeleri, randevu notları ve sağlık ölçümleri <strong>LIMANEX sunucularına iletilmez ve tarafımızca merkezi sunucularda depolanmaz</strong>. Verilerin zilyetliği ve denetimi kullanıcının kendi cihazındadır.</li>
               <li><strong>Biyometrik Veriler:</strong> Cihaz parmak izi veya yüz tanıma verileri doğrudan cihaz işletim sistemi (<code>local_auth</code>) tarafından yerel olarak işlenir; VitaCase biyometrik verilerinizi asla toplamaz veya harici sunuculara göndermez.</li>
             </ul>
           </div>
@@ -450,7 +448,7 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
           <div>
             <h3 className="text-lg font-bold text-white mb-2">3.5 Kişisel Verilerin Aktarıldığı Taraflar</h3>
             <p>
-              Kullanıcının girdiği kişisel sağlık kayıtları ve belgeleri <strong>hiçbir üçüncü tarafa aktarılmaz</strong>. Yalnızca teknik ve tanılama verileri sınırlı olarak altyapı sağlayıcılarına aktarılabilmektedir:
+              Kullanıcının girdiği kişisel sağlık kayıtları ve belgeleri üçüncü taraflara aktarılmaz. Yalnızca teknik ve tanılama verileri sınırlı olarak altyapı sağlayıcılarına aktarılabilmektedir:
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1">
               <li><strong>Google LLC:</strong> Firebase Analytics, Firebase Crashlytics ve Google AdMob hizmetleri kapsamında.</li>
@@ -461,7 +459,7 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
           <div>
             <h3 className="text-lg font-bold text-white mb-2">3.6 Veri Saklama Süresi ve Silme Hakkı</h3>
             <p>
-              VitaCase üzerinde saklanan yerel veriler kullanıcı tarafından istendiği zaman silinebilir. Kullanıcı, Uygulama Ayarları içerisindeki <strong>&ldquo;Verileri Temizle&rdquo; (Wipe All Data)</strong> fonksiyonunu kullanarak veya uygulamayı cihazından kaldırarak tüm şifreli yerel veritabanını kalıcı ve geri döndürülemez şekilde silebilir.
+              VitaCase üzerinde saklanan yerel veriler kullanıcı tarafından istendiği zaman silinebilir. Kullanıcı, Uygulama Ayarları içerisindeki <strong>&ldquo;Veri ve Güvenlik&rdquo; &rarr; &ldquo;Tüm Verileri Temizle&rdquo; (Clear All Data)</strong> fonksiyonunu kullanarak veya uygulamayı cihazından kaldırarak şifreli yerel verilerini silebilir. (Cihaz işletim sistemi düzeyinde Google Cloud yedeklemesi aktif ise, yedekleme dosyaları Google hesap ayarları üzerinden yönetilir).
             </p>
           </div>
 
@@ -556,7 +554,7 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
           <div>
             <h3 className="text-lg font-bold text-white mb-2">4.7 Assumption of Risk</h3>
             <p>
-              By using VitaCase, you explicitly acknowledge and agree that you understand the limitations of the App and that Limanex Software shall not be liable for any claims, complications, or damages arising from your reliance on VitaCase.
+              By using VitaCase, you explicitly acknowledge and agree that you understand the limitations of the App and that LIMANEX shall not be liable for any claims, complications, or damages arising from your reliance on VitaCase.
             </p>
           </div>
         </div>
@@ -579,14 +577,14 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
 
         <div className="space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
           <div>
-            <h3 className="text-lg font-bold text-white mb-2">5.1 Local-First Architecture</h3>
+            <h3 className="text-lg font-bold text-white mb-2">5.1 Local Storage Architecture</h3>
             <p>
-              VitaCase operates under an <strong>offline-first, local-storage</strong> architecture:
+              VitaCase operates under an on-device personal data storage model:
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1.5">
-              <li><strong>No Cloud Accounts:</strong> Your documents, health records, prescriptions, medications, and vital logs are stored and encrypted (AES-256-GCM) <strong>locally on your device</strong>.</li>
-              <li><strong>Zero Remote Copies:</strong> Limanex Software does not maintain central servers, cloud backups, or remote copies of your stored files and databases.</li>
-              <li><strong>Sole User Custody:</strong> You maintain exclusive physical and logical custody over all personal and medical information.</li>
+              <li><strong>No Remote Cloud Accounts:</strong> Your documents, health records, prescriptions, medications, and vital logs are stored locally on your device in an encrypted vault (AES-256-GCM).</li>
+              <li><strong>Zero Cloud Copies of Records:</strong> LIMANEX does not operate central servers or cloud backups of your personal files and local databases.</li>
+              <li><strong>Sole User Custody:</strong> You maintain exclusive logical and physical control over all personal and medical information entered into the App.</li>
             </ul>
           </div>
 
@@ -601,15 +599,15 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
-                <h4 className="font-bold text-white text-sm mb-1">2. In-App Complete Data Wipe (&ldquo;Verileri Temizle&rdquo; / &ldquo;Wipe All Data&rdquo;)</h4>
+                <h4 className="font-bold text-white text-sm mb-1">2. In-App Complete Data Wipe (&ldquo;Clear All Data&rdquo; / &ldquo;Tüm Verileri Temizle&rdquo;)</h4>
                 <p className="text-xs text-gray-400 leading-relaxed">
-                  Located in <strong>Settings &rarr; Security &amp; Data</strong>: Permanently purges the local database, deletes all encrypted vault files, wipes master encryption keys from hardware secure storage, clears cache, and cancels all scheduled notifications.
+                  Located in <strong>Settings &rarr; Data &amp; Security &rarr; Clear All Data</strong> (&ldquo;Veri ve Güvenlik &rarr; Tüm Verileri Temizle&rdquo;): Purges the local database, deletes all stored files from the encrypted document vault, wipes the AES-256 master key from device secure storage, and cancels all scheduled local reminders.
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
                 <h4 className="font-bold text-white text-sm mb-1">3. Application Uninstallation</h4>
                 <p className="text-xs text-gray-400 leading-relaxed">
-                  Uninstalling VitaCase via operating system settings permanently erases the application&apos;s isolated private storage sandbox and all encrypted files.
+                  Uninstalling VitaCase via operating system settings removes the application&apos;s isolated private storage sandbox on your device. <em>Note on Operating System Backups:</em> If you have enabled Android Auto Backup or Google Drive cloud backup on your device, snapshots managed by your operating system follow your Google Account settings.
                 </p>
               </div>
             </div>
@@ -621,9 +619,8 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
               While in-app wiping and uninstallation purge all local user files, they do not automatically delete diagnostic telemetry that may have been transmitted to third-party infrastructure:
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1.5 text-xs text-gray-400">
-              <li><strong>Firebase Analytics:</strong> Retained for 2 to 14 months per Google&apos;s standard retention cycles.</li>
-              <li><strong>Firebase Crashlytics:</strong> Crash reports retained for 90 days.</li>
-              <li><strong>Sentry:</strong> Real-time error diagnostic logs retained for 30 to 90 days.</li>
+              <li><strong>Firebase Analytics &amp; Crashlytics:</strong> Retained by Google in accordance with standard developer retention schedules and platform policies.</li>
+              <li><strong>Sentry:</strong> Retained by Sentry in accordance with its developer diagnostic retention policies.</li>
               <li><strong>Google AdMob:</strong> Governed by Google Mobile Ads SDK and user device advertising ID settings.</li>
             </ul>
           </div>
@@ -638,7 +635,7 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms', pageMode = 'ter
               <strong>Subject:</strong> Data Deletion Request — VitaCase
             </p>
             <p className="text-xs text-gray-400 mt-2">
-              *Because VitaCase does not collect your name or cloud account credentials, you may provide your installation UUID (<code>app_user_uid</code>) to locate diagnostic error logs.
+              *Because VitaCase does not maintain user accounts or require email registration, LIMANEX does not store personal profiles linking diagnostic telemetry to individual user names. If you have questions regarding telemetry handled by third-party services, contact us directly.
             </p>
           </div>
         </div>

@@ -5,15 +5,15 @@ import { useSEO } from '../hooks/useSEO';
 
 export default function VitaCaseDisclaimer() {
   useSEO({
-    title: 'VitaCase Health & Medical Disclaimer — LIMANEX STUDIO',
-    description: 'Health, medical, medication, and notification reliability disclaimers for the VitaCase personal health organizer.',
+    title: 'VitaCase Health Disclaimer — LIMANEX',
+    description: 'Health, medical, medication, and notification reliability disclaimers for VitaCase, published by LIMANEX.',
     canonical: 'https://limanexstudio.com/disclaimer/vitacase',
   });
 
   return (
     <LegalLayout
       title="VitaCase Health Disclaimer"
-      subtitle="TERMS & PRIVACY — LAST UPDATED: OCTOBER 6, 2026"
+      subtitle="TERMS & PRIVACY — PUBLISHED BY LIMANEX — LAST UPDATED: OCTOBER 6, 2026"
       badge="Canonical Legal Master"
       badgeIcon={AlertTriangle}
       app="vitacase"
