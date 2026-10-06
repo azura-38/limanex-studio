@@ -25,6 +25,7 @@ const VitaCaseDisclaimer = lazy(() => import("./pages/VitaCaseDisclaimer"));
 const MeowoirsPrivacy = lazy(() => import("./pages/MeowoirsPrivacy"));
 const MeowoirsTerms = lazy(() => import("./pages/MeowoirsTerms"));
 const MeowoirsDisclaimer = lazy(() => import("./pages/MeowoirsDisclaimer"));
+const DeleteAccount = lazy(() => import("./pages/DeleteAccount"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Memoized studio background with ambient glow & subtle cosmic grid
@@ -97,6 +98,8 @@ export default function App() {
               <Route path="/apps/vitacase/privacy" element={<VitaCasePrivacy />} />
               <Route path="/apps/vitacase/terms" element={<VitaCaseTerms />} />
               <Route path="/apps/vitacase/disclaimer" element={<VitaCaseDisclaimer />} />
+              <Route path="/delete-account" element={<DeleteAccount />} />
+              <Route path="/apps/vitacase/delete-account" element={<DeleteAccount />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

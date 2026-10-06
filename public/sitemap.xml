@@ -66,6 +66,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://limanexstudio.com/delete-account</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://limanexstudio.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

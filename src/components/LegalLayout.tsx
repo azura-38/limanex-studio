@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Shield, FileText, AlertTriangle, Mail, ChevronRight, ArrowLeft, ArrowRightLeft } from "lucide-react";
+import { Shield, FileText, AlertTriangle, Mail, ChevronRight, ArrowLeft, ArrowRightLeft, Trash2 } from "lucide-react";
 import clsx from "clsx";
 
 interface LegalLinkItem {
@@ -61,19 +61,19 @@ export function LegalLayout({
       name: "VitaCase Privacy Policy",
       path: isAppsRoute ? "/apps/vitacase/privacy" : "/privacy/vitacase",
       matchPaths: ["/privacy/vitacase", "/apps/vitacase/privacy"],
-      icon: FileText,
+      icon: Shield,
     },
     {
-      name: "VitaCase Terms & Conditions",
+      name: "VitaCase Terms of Use",
       path: isAppsRoute ? "/apps/vitacase/terms" : "/terms/vitacase",
       matchPaths: ["/terms/vitacase", "/apps/vitacase/terms"],
       icon: FileText,
     },
     {
-      name: "VitaCase Medical Disclaimer",
-      path: isAppsRoute ? "/apps/vitacase/disclaimer" : "/disclaimer/vitacase",
-      matchPaths: ["/disclaimer/vitacase", "/apps/vitacase/disclaimer"],
-      icon: AlertTriangle,
+      name: "Data Retention & Deletion",
+      path: "/delete-account",
+      matchPaths: ["/delete-account", "/apps/vitacase/delete-account"],
+      icon: Trash2,
     },
     { name: "Contact Support", path: "/contact", matchPaths: ["/contact"], icon: Mail },
   ];

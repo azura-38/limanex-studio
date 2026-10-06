@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Heart, FileText, AlertTriangle, ArrowRight, ChevronRight, Lock } from "lucide-react";
+import { Shield, Heart, FileText, AlertTriangle, ArrowRight, ChevronRight, Lock, Trash2 } from "lucide-react";
 import { useSEO } from "../hooks/useSEO";
 import { StructuredData, getOrganizationSchema, getBreadcrumbSchema } from "../components/StructuredData";
 
@@ -83,9 +83,9 @@ export default function Privacy() {
                 className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.06] transition-all group/doc"
               >
                 <div className="flex items-center gap-3">
-                  <FileText className="w-4 h-4 text-brand-300" aria-hidden="true" />
+                  <Shield className="w-4 h-4 text-brand-300" aria-hidden="true" />
                   <span className="text-sm font-medium text-gray-200 group-hover/doc:text-white">
-                    VitaCase Privacy Policy
+                    VitaCase Privacy Policy &amp; GDPR
                   </span>
                 </div>
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover/doc:translate-x-0.5 transition-transform" />
@@ -98,20 +98,20 @@ export default function Privacy() {
                 <div className="flex items-center gap-3">
                   <FileText className="w-4 h-4 text-accent-400" aria-hidden="true" />
                   <span className="text-sm font-medium text-gray-200 group-hover/doc:text-white">
-                    VitaCase Terms &amp; Conditions
+                    VitaCase Terms of Use
                   </span>
                 </div>
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover/doc:translate-x-0.5 transition-transform" />
               </Link>
 
               <Link
-                to="/disclaimer/vitacase"
+                to="/delete-account"
                 className="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.06] transition-all group/doc"
               >
                 <div className="flex items-center gap-3">
-                  <AlertTriangle className="w-4 h-4 text-yellow-400" aria-hidden="true" />
+                  <Trash2 className="w-4 h-4 text-red-400" aria-hidden="true" />
                   <span className="text-sm font-medium text-gray-200 group-hover/doc:text-white">
-                    VitaCase Medical Disclaimer
+                    Account &amp; Data Deletion Instructions
                   </span>
                 </div>
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover/doc:translate-x-0.5 transition-transform" />

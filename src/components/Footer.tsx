@@ -91,7 +91,12 @@ export function Footer() {
                 </li>
                 <li>
                   <Link to="/privacy/vitacase" className="text-gray-400 hover:text-white transition-colors duration-200">
-                    VitaCase Legal
+                    VitaCase Terms &amp; Privacy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/delete-account" className="text-gray-400 hover:text-white transition-colors duration-200">
+                    Data Deletion
                   </Link>
                 </li>
                 <li>
