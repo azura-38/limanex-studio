@@ -13,7 +13,7 @@ export default function VitaCaseTerms() {
   return (
     <LegalLayout
       title="VitaCase Terms of Use"
-      subtitle="TERMS & PRIVACY — PUBLISHED BY LIMANEX — LAST UPDATED: OCTOBER 6, 2026"
+      subtitle="TERMS & PRIVACY — PUBLISHED BY LIMANEX — LAST UPDATED: OCTOBER 11, 2026"
       badge="Canonical Legal Master"
       badgeIcon={FileText}
       app="vitacase"

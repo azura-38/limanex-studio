@@ -77,7 +77,7 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms' }: VitaCaseUnifi
               Version 1.1.7-2026-10
             </span>
             <span className="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/[0.05] border border-white/10 text-gray-300">
-              Updated: Oct 6, 2026
+              Updated: Oct 11, 2026
             </span>
           </div>
         </div>
