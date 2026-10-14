@@ -237,9 +237,12 @@ export function VitaCaseUnifiedLegal({ initialSection = 'terms' }: VitaCaseUnifi
           </div>
 
           <div>
-            <h3 className="text-lg font-bold text-white mb-2">1.13 Governing Law &amp; Jurisdiction</h3>
+            <h3 className="text-lg font-bold text-white mb-2">1.13 Governing Law &amp; Dispute Resolution</h3>
             <p>
-              These Terms shall be governed by and construed in accordance with the laws of the Republic of Turkey. Any dispute arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the competent courts of Istanbul, Turkey.
+              These Terms shall be governed by and construed in accordance with the laws of the Republic of Turkey. Any dispute arising under or in connection with these Terms shall be subject to the jurisdiction of the competent courts and enforcement offices of the Republic of Turkey, without prejudice to mandatory statutory mediation (arabuluculuk), consumer arbitration committee (Tüketici Hakem Heyeti) applications, or other statutory dispute resolution paths where required by applicable law.
+            </p>
+            <p className="mt-2">
+              Nothing in these Terms shall diminish, exclude, or prejudice any mandatory consumer rights, remedies, or statutory protections that cannot be waived or derogated from by agreement under applicable consumer protection legislation.
             </p>
           </div>
 
