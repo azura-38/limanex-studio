@@ -1,20 +1,18 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Limanex Studio Website
 
-# Run and deploy your AI Studio app
+Static multi-page website for **Limanex Studio** (`limanexstudio.com`), styled with the Tactile Cartridge dark design system.
 
-This contains everything you need to run your app locally.
+## Structure
 
-View your app in AI Studio: https://ai.studio/apps/6f495f5e-8d29-46f3-9d06-61aeea29d27b
+- Multi-page static HTML entrypoints (`index.html`, `apps.html`, `apps/vitacase.html`, `apps/meowoirs.html`, `games.html`, `ai.html`, `contact.html`, `delete-account.html`, `privacy/`, `terms/`, `disclaimer/`, `404.html`)
+- Shared stylesheet (`styles.css`) and progressive-enhancement script (`main.js`)
+- Self-hosted media assets under `assets/`
+- Root SEO, icon, manifest, and AdMob verification files (`public/app-ads.txt`, `public/ads.txt`, `public/robots.txt`, `public/sitemap.xml`, favicons)
 
-## Run Locally
+## Build
 
-**Prerequisites:**  Node.js
+```bash
+npm run build
+```
 
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Builds all static pages, assets, and root `public/` files into `dist/` for deployment on Vercel (`vercel.json`).

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meowoirs — Every Cat Has a Story | Limanex Studio</title>
+  <meta name="description" content="A quiet, offline cat memory journal and relationship diary with home and street profiles, photo notes, and dual mood reflections." />
+  <link rel="canonical" href="https://limanexstudio.com/apps/meowoirs" />
+  <meta name="theme-color" content="#161513" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Limanex Studio" />
+  <meta property="og:title" content="Meowoirs — Every Cat Has a Story | Limanex Studio" />
+  <meta property="og:description" content="A quiet, offline cat memory journal and relationship diary with home and street profiles, photo notes, and dual mood reflections." />
+  <meta property="og:url" content="https://limanexstudio.com/apps/meowoirs" />
+  <meta property="og:image" content="https://limanexstudio.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meowoirs — Every Cat Has a Story | Limanex Studio" />
+  <meta name="twitter:description" content="A quiet, offline cat memory journal and relationship diary with home and street profiles, photo notes, and dual mood reflections." />
+  <meta name="twitter:image" content="https://limanexstudio.com/og-image.png" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="/" class="brand" aria-label="Limanex Studio — Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-wordmark">Limanex</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link" aria-current="page">Apps</a>
+        <a href="/games" class="nav-link">Games</a>
+        <a href="/ai" class="nav-link">AI</a>
+        <a href="/privacy" class="nav-link">Legal</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/contact" class="btn btn-sm btn-primary nav-cta-desktop">
+          Get in touch
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16" />
+            <path d="M4 12h16" />
+            <path d="M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <div class="container">
+        <nav aria-label="Mobile navigation">
+          <ul class="mobile-nav-list">
+            <li><a href="/" class="mobile-nav-link">Home</a></li>
+            <li><a href="/apps" class="mobile-nav-link">Apps</a></li>
+            <li><a href="/games" class="mobile-nav-link">Games</a></li>
+            <li><a href="/ai" class="mobile-nav-link">AI</a></li>
+            <li><a href="/privacy" class="mobile-nav-link">Legal</a></li>
+          </ul>
+          <a href="/contact" class="btn btn-primary mobile-nav-cta">
+            Get in touch
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-top" aria-label="Meowoirs overview">
+      <div class="container hero-enter">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/apps">Apps</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Meowoirs</span>
+        </nav>
+
+        <div class="app-hero-grid">
+          <div class="app-hero-copy">
+            <div class="app-listing-id">
+              <div class="app-icon-tile">
+                <img src="/assets/meowoirs-icon.webp" alt="Meowoirs app icon" width="48" height="48" />
+              </div>
+              <div class="stamp">
+                <span class="stamp-num">№ 02</span>
+                <span>Every cat has a story · Android</span>
+              </div>
+            </div>
+
+            <h1 class="page-title">A dedicated cat memory journal and relationship diary</h1>
+            <p class="page-subhead">A quiet, personal memory journal designed exclusively for cats and the people who love them</p>
+
+            <div class="hero-actions">
+              <a href="https://play.google.com/store/apps/details?id=com.limanex.meowoirs" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="6 3 20 12 6 21 6 3" />
+                </svg>
+                Get it on Google Play
+              </a>
+              <a href="#gallery" class="btn btn-secondary">
+                View gallery
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            <span class="hero-note">Free to use · No sign-up required · 100% offline SQLite</span>
+          </div>
+
+          <div class="slide-well">
+            <div class="gallery-photo-frame">
+              <img src="/assets/meowoirs_1.webp" alt="Tabby cat resting on sunny stone steps beside terracotta planters" width="896" height="1200" />
+            </div>
+            <div class="well-caption">
+              <span>Home and street profiles</span>
+              <span>Local SQLite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container">
+        <ul class="trust-list">
+          <li class="trust-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+            <span>100% offline-first SQLite storage</span>
+          </li>
+          <li class="trust-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            <span>No account or remote photo sync</span>
+          </li>
+          <li class="trust-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+              <circle cx="9" cy="9" r="2" />
+              <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+            </svg>
+            <span>Android Photo Picker privacy</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="section" aria-label="Meowoirs features">
+      <div class="container">
+        <div class="section-head">
+          <div class="stamp">
+            <span class="stamp-num">Features</span>
+            <span>Built for quiet memories</span>
+          </div>
+          <h2 class="section-title">Everything you need, nothing extra</h2>
+          <p class="section-desc">Simple tools for keeping every photo, quirk, and mood reflection organized by cat</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            </svg>
+            <h3 class="feature-title">Dedicated cat profiles (home and street)</h3>
+            <p class="feature-copy">Organize profiles for indoor companions and neighborhood street cats. Keep photos, notes, and individual memory timelines distinct for each cat.</p>
+          </article>
+
+          <article class="feature-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+              <circle cx="9" cy="9" r="2" />
+              <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+            </svg>
+            <h3 class="feature-title">Daily photo and note journaling</h3>
+            <p class="feature-copy">Save photos alongside your daily notes. Record the quiet naps in sunlit spots, sudden bursts of playfulness, and familiar routines.</p>
+          </article>
+
+          <article class="feature-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+            </svg>
+            <h3 class="feature-title">Dual mood reflections</h3>
+            <p class="feature-copy">Capture feelings on both sides of every memory: record how your cat seemed alongside your own reflection to remember how the day felt.</p>
+          </article>
+
+          <article class="feature-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+            <h3 class="feature-title">100% offline-first and private</h3>
+            <p class="feature-copy">Your memories belong to you alone. No account is required and no remote servers collect your photos — everything stays in local Room SQLite storage.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section" aria-label="Meowoirs gallery">
+      <div class="container">
+        <div class="section-head">
+          <div class="stamp">
+            <span class="stamp-num">Gallery</span>
+            <span>Moments and profiles</span>
+          </div>
+          <h2 class="section-title">Designed for quiet journaling</h2>
+          <p class="section-desc">Cat profiles, photo entries, and dual mood reflections in a calm offline timeline</p>
+        </div>
+
+        <div class="gallery-stage" data-gallery>
+          <div class="gallery-toolbar">
+            <div class="gallery-tabs" role="tablist" aria-label="Meowoirs frames">
+              <button type="button" class="catalog-tab" role="tab" aria-selected="true" data-gallery-tab>
+                <span class="tab-num">01</span>
+                <span>Street profiles</span>
+              </button>
+              <button type="button" class="catalog-tab" role="tab" aria-selected="false" data-gallery-tab>
+                <span class="tab-num">02</span>
+                <span>Home naps</span>
+              </button>
+              <button type="button" class="catalog-tab" role="tab" aria-selected="false" data-gallery-tab>
+                <span class="tab-num">03</span>
+                <span>Quiet reflections</span>
+              </button>
+            </div>
+
+            <div class="catalog-controls">
+              <span class="slide-counter" data-gallery-counter aria-live="polite">01 / 03</span>
+              <button type="button" class="icon-btn" data-gallery-prev aria-label="Previous image">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <button type="button" class="icon-btn" data-gallery-next aria-label="Next image">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+              <button type="button" class="btn btn-sm btn-secondary" data-gallery-expand>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 3h6v6" />
+                  <path d="m21 3-7 7" />
+                  <path d="M9 21H3v-6" />
+                  <path d="m3 21 7-7" />
+                </svg>
+                Expand
+              </button>
+            </div>
+          </div>
+
+          <div class="gallery-viewport">
+            <div class="gallery-screen" role="tabpanel" data-gallery-screen data-title="Cat profiles and memory timeline">
+              <div class="gallery-screen-grid">
+                <div class="gallery-caption-col">
+                  <div class="stamp"><span class="stamp-num">01</span><span>Street and neighborhood cats</span></div>
+                  <h3 class="gallery-screen-title">Track neighborhood cats alongside pets at home</h3>
+                  <p class="gallery-screen-desc">Separate tags let you keep memories for friendly street cats in your neighborhood without mixing them into your indoor cat's timeline.</p>
+                </div>
+                <div class="gallery-photo-frame">
+                  <img src="/assets/meowoirs_1.webp" alt="Meowoirs app — cat profiles and memory timeline" width="896" height="1200" />
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-screen" role="tabpanel" data-gallery-screen data-title="Mood reflections and daily stories" hidden>
+              <div class="gallery-screen-grid">
+                <div class="gallery-caption-col">
+                  <div class="stamp"><span class="stamp-num">02</span><span>Dual mood reflections</span></div>
+                  <h3 class="gallery-screen-title">Pair a snapshot with how you both felt</h3>
+                  <p class="gallery-screen-desc">Attach informal mood notes like Sleepy, Calm, Curious, or Playful alongside photos selected safely with Android Photo Picker.</p>
+                </div>
+                <div class="gallery-photo-frame">
+                  <img src="/assets/meowoirs_2.webp" alt="Meowoirs app — emotional mood reflections and daily cat stories" width="1200" height="900" />
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-screen" role="tabpanel" data-gallery-screen data-title="Editorial memory entries" hidden>
+              <div class="gallery-screen-grid">
+                <div class="gallery-caption-col">
+                  <div class="stamp"><span class="stamp-num">03</span><span>Offline journal entries</span></div>
+                  <h3 class="gallery-screen-title">A calm archive you keep locally</h3>
+                  <p class="gallery-screen-desc">Entries stay on your own device with no cloud sync required, keeping everyday moments easy to revisit years later.</p>
+                </div>
+                <div class="gallery-photo-frame">
+                  <img src="/assets/meowoirs_3.webp" alt="Meowoirs app — editorial memory entries with photos and notes" width="896" height="1200" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Experience Meowoirs video">
+      <div class="container">
+        <div class="meowoirs-header">
+          <div class="meowoirs-lead">
+            <div class="stamp">
+              <span class="stamp-num">Film</span>
+              <span>Experience Meowoirs</span>
+            </div>
+            <h2 class="section-title">Every cat has a story to tell</h2>
+          </div>
+          <div class="meowoirs-intro">
+            <p class="section-desc">Watch how Meowoirs creates a quiet sanctuary for your feline memories, moods, and notes</p>
+          </div>
+        </div>
+
+        <div class="media-frame">
+          <video id="meowoirs-video" poster="/assets/meowoirs-poster.webp" playsinline preload="metadata" aria-label="Meowoirs video demonstration">
+            <source src="/assets/meowoirs-main-video.mp4" type="video/mp4" />
+          </video>
+
+          <div class="media-badge">
+            <img src="/assets/meowoirs-icon.webp" alt="" width="20" height="20" />
+            <span>Meowoirs</span>
+          </div>
+
+          <button type="button" class="btn btn-sm btn-secondary video-control" id="video-toggle" aria-pressed="false">
+            <svg class="icon" id="video-icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="6 3 20 12 6 21 6 3" />
+            </svg>
+            <svg class="icon" id="video-icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+              <rect x="6" y="4" width="4" height="16" />
+              <rect x="14" y="4" width="4" height="16" />
+            </svg>
+            <span id="video-label">Play film</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Requirements and legal links">
+      <div class="container req-grid">
+        <div class="info-panel">
+          <div class="stamp"><span class="stamp-num">Requirements</span><span>Device support</span></div>
+          <h2 class="section-title">Device requirements</h2>
+          <ul class="req-list">
+            <li class="req-row">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                <path d="M12 18h.01" />
+              </svg>
+              <span>Android 8.0 (Oreo) or later</span>
+            </li>
+            <li class="req-row">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="14" x="3" y="5" rx="2" />
+              </svg>
+              <span>Optimized for smartphones and tablets</span>
+            </li>
+            <li class="req-row">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5v14a9 3 0 0 0 18 0V5" />
+                <path d="M3 12a9 3 0 0 0 18 0" />
+              </svg>
+              <span>100% offline-first SQLite on-device storage</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-panel">
+          <div class="stamp"><span class="stamp-num">Compliance</span><span>Legal and privacy</span></div>
+          <h2 class="section-title">Legal and privacy</h2>
+          <p class="section-desc">Review policies governing Meowoirs local SQLite storage, photo privacy, terms of service, and veterinary disclaimer</p>
+          <div class="legal-doc-list">
+            <a href="/privacy/meowoirs" class="legal-doc-row">
+              <span>Meowoirs Privacy Policy</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+            <a href="/terms/meowoirs" class="legal-doc-row">
+              <span>Terms of Service</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+            <a href="/disclaimer/meowoirs" class="legal-doc-row">
+              <span>Veterinary Disclaimer</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Download Meowoirs">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <div class="stamp"><span class="stamp-num">№ 02</span><span>Meowoirs on Android</span></div>
+            <h2 class="section-title">Preserve every paw print and memory</h2>
+            <p class="section-desc">Start journaling with dedicated profiles, photo notes, and dual mood reflections</p>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.limanex.meowoirs" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Get it on Google Play
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="brand" aria-label="Limanex Studio — Home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-wordmark">Limanex Studio</span>
+          </a>
+          <p class="footer-tagline">Independent software studio building offline-first mobile apps and tactile spatial games</p>
+          <a href="mailto:limanexsoftware@outlook.com" class="footer-email">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            limanexsoftware@outlook.com
+          </a>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-list">
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="/apps" class="footer-link">Apps</a></li>
+            <li><a href="/games" class="footer-link">Games</a></li>
+            <li><a href="/ai" class="footer-link">AI initiative</a></li>
+            <li><a href="/contact" class="footer-link">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Legal and trust</h2>
+          <ul class="footer-list">
+            <li><a href="/privacy" class="footer-link">Legal center</a></li>
+            <li><a href="/privacy/meowoirs" class="footer-link">Meowoirs privacy</a></li>
+            <li><a href="/terms/meowoirs" class="footer-link">Meowoirs terms</a></li>
+            <li><a href="/privacy/vitacase" class="footer-link">VitaCase terms and privacy</a></li>
+            <li><a href="/delete-account" class="footer-link">Data deletion</a></li>
+            <li><a href="mailto:limanexsoftware@outlook.com" class="footer-link">Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Limanex Studio</span>
+        <span>Private, on-device software</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Gallery Lightbox Dialog -->
+  <dialog class="preview-dialog" id="gallery-lightbox" aria-labelledby="lightbox-title">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <div>
+          <div class="stamp" id="lightbox-stamp"><span class="stamp-num">№ 01</span><span>Screen preview</span></div>
+          <h2 class="dialog-title" id="lightbox-title">Meowoirs</h2>
+        </div>
+        <button type="button" class="icon-btn" id="lightbox-close" aria-label="Close preview">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="dialog-body" id="lightbox-body"></div>
+      <div class="dialog-foot">
+        <button type="button" class="btn btn-secondary btn-sm" id="lightbox-dismiss">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/main.js"></script>
+</body>
+</html>

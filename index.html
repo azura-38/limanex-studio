@@ -1,50 +1,821 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limanex Studio — Private Mobile Apps and Spatial Games</title>
+  <meta name="description" content="Limanex Studio builds offline-first mobile apps for personal health records and pet memories, alongside native 3D spatial games." />
+  <link rel="canonical" href="https://limanexstudio.com/" />
+  <meta name="theme-color" content="#161513" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Limanex Studio" />
+  <meta property="og:title" content="Limanex Studio — Private Mobile Apps and Spatial Games" />
+  <meta property="og:description" content="Limanex Studio builds offline-first mobile apps for personal health records and pet memories, alongside native 3D spatial games." />
+  <meta property="og:url" content="https://limanexstudio.com/" />
+  <meta property="og:image" content="https://limanexstudio.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Limanex Studio — Private Mobile Apps and Spatial Games" />
+  <meta name="twitter:description" content="Limanex Studio builds offline-first mobile apps for personal health records and pet memories, alongside native 3D spatial games." />
+  <meta name="twitter:image" content="https://limanexstudio.com/og-image.png" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <!-- Primary SEO -->
-    <title>Limanex Studio — Apps & Games Designed for the Future</title>
-    <meta name="description" content="Limanex Studio builds precision-engineered apps and games. Discover VitaCase and Meowoirs, and explore our growing collection of digital tools." />
-    <link rel="canonical" href="https://limanexstudio.com/" />
-    <meta name="robots" content="index, follow" />
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="#top" class="brand" aria-label="Limanex Studio — Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-wordmark">Limanex</span>
+      </a>
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Limanex Studio" />
-    <meta property="og:title" content="Limanex Studio — Apps & Games Designed for the Future" />
-    <meta property="og:description" content="Precision-engineered apps and games. Discover VitaCase and Meowoirs, and explore our growing collection of digital tools." />
-    <meta property="og:url" content="https://limanexstudio.com/" />
-    <meta property="og:image" content="https://limanexstudio.com/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="en_US" />
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/" class="nav-link" aria-current="page">Home</a>
+        <a href="/apps" class="nav-link">Apps</a>
+        <a href="/games" class="nav-link">Games</a>
+        <a href="/ai" class="nav-link">AI</a>
+        <a href="/privacy" class="nav-link">Legal</a>
+      </nav>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Limanex Studio — Apps & Games Designed for the Future" />
-    <meta name="twitter:description" content="Precision-engineered apps and games. Discover VitaCase and Meowoirs, and explore our growing collection of digital tools." />
-    <meta name="twitter:image" content="https://limanexstudio.com/og-image.png" />
+      <div class="nav-actions">
+        <a href="/contact" class="btn btn-sm btn-primary nav-cta-desktop">
+          Get in touch
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16" />
+            <path d="M4 12h16" />
+            <path d="M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
 
-    <!-- Theme & Icons -->
-    <meta name="theme-color" content="#0a0a0f" />
-    <meta name="msapplication-TileColor" content="#8B5CF6" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <div class="container">
+        <nav aria-label="Mobile navigation">
+          <ul class="mobile-nav-list">
+            <li><a href="/" class="mobile-nav-link">Home</a></li>
+            <li><a href="/apps" class="mobile-nav-link">Apps</a></li>
+            <li><a href="/games" class="mobile-nav-link">Games</a></li>
+            <li><a href="/ai" class="mobile-nav-link">AI</a></li>
+            <li><a href="/privacy" class="mobile-nav-link">Legal</a></li>
+          </ul>
+          <a href="/contact" class="btn btn-primary mobile-nav-cta">
+            Get in touch
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- Preload critical font -->
-    <link rel="preload" href="/fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <main id="main-content">
+    <!-- Section 1: Hero -->
+    <section id="top" class="hero" aria-label="Hero">
+      <div class="container hero-enter">
+        <div class="hero-top">
+          <div class="hero-copy">
+            <div class="stamp">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Independent software studio · Android live, iOS planned</span>
+            </div>
+            <h1 class="hero-title">Private apps and tactile games built to stay on your device</h1>
+            <p class="hero-subhead">Limanex Studio builds offline-first tools for personal medical documents and pet memories, alongside native 3D spatial games</p>
+            <div class="hero-actions">
+              <a href="/apps/vitacase" class="btn btn-primary">
+                Explore VitaCase
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+              <a href="/games" class="btn btn-secondary">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="6" x2="10" y1="12" y2="12" />
+                  <line x1="8" x2="8" y1="10" y2="14" />
+                  <line x1="15" x2="15.01" y1="13" y2="13" />
+                  <line x1="18" x2="18.01" y1="11" y2="11" />
+                  <rect width="20" height="12" x="2" y="6" rx="2" />
+                </svg>
+                View games
+              </a>
+            </div>
+          </div>
+
+          <dl class="hero-ledger" aria-label="Studio facts">
+            <div class="ledger-row">
+              <dt class="ledger-value">02</dt>
+              <dd class="ledger-label">Apps on Google Play · iOS planned</dd>
+            </div>
+            <div class="ledger-row">
+              <dt class="ledger-value">100%</dt>
+              <dd class="ledger-label">On-device local storage</dd>
+            </div>
+            <div class="ledger-row">
+              <dt class="ledger-value">01</dt>
+              <dd class="ledger-label">Spatial game in development</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Rising Studio Product Showcase -->
+        <div class="hero-showcase" aria-label="Product previews">
+          <div class="showcase-grid">
+            <!-- VitaCase Artifact -->
+            <article class="artifact-card" aria-label="VitaCase encrypted vault preview">
+              <div class="artifact-header">
+                <div>
+                  <div class="stamp"><span class="stamp-num">№ 01</span><span>VitaCase</span></div>
+                  <h2 class="artifact-title">Encrypted document vault</h2>
+                </div>
+                <span class="tag tag--positive">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  AES-256-GCM
+                </span>
+              </div>
+
+              <div class="doc-list">
+                <div class="doc-row">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  </svg>
+                  <div class="doc-meta-wrap">
+                    <div class="doc-filename">Blood_Test_Oct2026.pdf</div>
+                    <div class="doc-sub">Lab PDF · Oct 14, 2026</div>
+                  </div>
+                  <span class="doc-size">1.4 MB</span>
+                </div>
+                <div class="doc-row">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  </svg>
+                  <div class="doc-meta-wrap">
+                    <div class="doc-filename">Cardiology_Echo_Sep2026.pdf</div>
+                    <div class="doc-sub">Clinic report · Sep 28, 2026</div>
+                  </div>
+                  <span class="doc-size">2.1 MB</span>
+                </div>
+                <div class="doc-row">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  </svg>
+                  <div class="doc-meta-wrap">
+                    <div class="doc-filename">Prescription_Autumn.pdf</div>
+                    <div class="doc-sub">Prescription · Sep 10, 2026</div>
+                  </div>
+                  <span class="doc-size">420 KB</span>
+                </div>
+              </div>
+
+              <div class="mini-split">
+                <div class="mini-box">
+                  <span class="mini-kicker">Next reminder · 20:00</span>
+                  <span class="mini-primary">Vitamin D3 2000 IU</span>
+                  <span class="mini-secondary">Daily schedule · Local</span>
+                </div>
+                <div class="mini-box">
+                  <span class="mini-kicker">Saved doctor</span>
+                  <span class="mini-primary">Dr. Selin Kaya</span>
+                  <span class="mini-secondary">Internal Medicine · Clinic</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Meowoirs Artifact -->
+            <article class="artifact-card" aria-label="Meowoirs journal entry preview">
+              <div class="artifact-header">
+                <div>
+                  <div class="stamp"><span class="stamp-num">№ 02</span><span>Meowoirs</span></div>
+                  <h2 class="artifact-title">Milo · Home cat</h2>
+                </div>
+                <span class="artifact-meta">Oct 18 · 16:40</span>
+              </div>
+
+              <div class="cat-thumb">
+                <img src="/assets/meowoirs-poster.webp" alt="Tabby cat Milo curled up asleep on a cream knit blanket" width="894" height="503" />
+              </div>
+
+              <p class="cat-entry-body">Curled up on the wool throw right as the late sun hit the sofa</p>
+
+              <div class="mood-pair">
+                <span class="tag tag--accent">Milo: Sleepy</span>
+                <span class="tag">You: Calm</span>
+                <span class="tag">Offline SQLite</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Featured Application — Meowoirs -->
+    <section id="meowoirs-showcase" class="section" aria-label="Featured Application — Meowoirs">
+      <div class="container">
+        <div class="meowoirs-header">
+          <div class="meowoirs-lead">
+            <div class="stamp">
+              <span class="stamp-num">№ 02</span>
+              <span>Meowoirs · Cat relationship diary</span>
+            </div>
+            <h2 class="section-title">Every cat has a story</h2>
+          </div>
+
+          <div class="meowoirs-intro">
+            <p class="section-desc">A quiet, personal memory journal built for cats and the humans who care for them. Preserve daily moments, photo milestones, and dual mood reflections in offline on-device storage.</p>
+            <div class="meowoirs-actions">
+              <a href="/apps/meowoirs" class="btn btn-primary">
+                Explore Meowoirs
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.limanex.meowoirs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="6 3 20 12 6 21 6 3" />
+                </svg>
+                Google Play
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-frame">
+          <video id="meowoirs-video" poster="/assets/meowoirs-poster.webp" playsinline preload="metadata">
+            <source src="/assets/meowoirs-main-video.mp4" type="video/mp4" />
+          </video>
+
+          <div class="media-badge">
+            <img src="/assets/meowoirs-icon.webp" alt="" width="20" height="20" />
+            <span>Meowoirs</span>
+          </div>
+
+          <button type="button" class="btn btn-sm btn-secondary video-control" id="video-toggle" aria-pressed="false">
+            <svg class="icon" id="video-icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="6 3 20 12 6 21 6 3" />
+            </svg>
+            <svg class="icon" id="video-icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+              <rect x="6" y="4" width="4" height="16" />
+              <rect x="14" y="4" width="4" height="16" />
+            </svg>
+            <span id="video-label">Play film</span>
+          </button>
+        </div>
+
+        <ul class="spec-strip">
+          <li class="spec-item">
+            <svg class="icon spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            </svg>
+            <div>
+              <h3 class="spec-title">Home and street profiles</h3>
+              <p class="spec-copy">Separate journals for indoor companions and neighborhood cats</p>
+            </div>
+          </li>
+          <li class="spec-item">
+            <svg class="icon spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+            </svg>
+            <div>
+              <h3 class="spec-title">Dual mood reflections</h3>
+              <p class="spec-copy">Capture how your cat seemed alongside your own reflection</p>
+            </div>
+          </li>
+          <li class="spec-item">
+            <svg class="icon spec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+            <div>
+              <h3 class="spec-title">Offline SQLite storage</h3>
+              <p class="spec-copy">All notes and photos stay on your phone with no cloud account</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 3: Studio Applications Catalog Slider -->
+    <section id="apps" class="section" aria-label="Studio applications slider">
+      <div class="container">
+        <div class="catalog-header">
+          <div class="section-head">
+            <div class="stamp">
+              <span class="stamp-num">Catalog</span>
+              <span>Studio releases</span>
+            </div>
+            <h2 class="section-title">Apps and games in the studio</h2>
+            <p class="section-desc">Two Android apps available on Google Play and one spatial puzzle game currently in development</p>
+          </div>
+
+          <div class="catalog-controls">
+            <span class="slide-counter" id="slide-counter" aria-live="polite">01 / 03</span>
+            <button type="button" class="icon-btn" id="slide-prev" aria-label="Previous release">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+            <button type="button" class="icon-btn" id="slide-next" aria-label="Next release">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+            <a href="/apps" class="text-link">
+              View all
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="catalog-tabs" role="tablist" aria-label="Studio products">
+          <button type="button" class="catalog-tab" role="tab" id="tab-0" aria-controls="panel-0" aria-selected="true" data-slide="0">
+            <span class="tab-num">№ 01</span>
+            <span>VitaCase</span>
+            <span class="tab-type">App</span>
+          </button>
+          <button type="button" class="catalog-tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="false" data-slide="1">
+            <span class="tab-num">№ 02</span>
+            <span>Meowoirs</span>
+            <span class="tab-type">App</span>
+          </button>
+          <button type="button" class="catalog-tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" data-slide="2">
+            <span class="tab-num">№ 03</span>
+            <span>Block Dimension</span>
+            <span class="tab-type">Game</span>
+          </button>
+        </div>
+
+        <!-- Slide 1: VitaCase -->
+        <div class="catalog-panel" role="tabpanel" id="panel-0" aria-labelledby="tab-0">
+          <div class="slide-grid">
+            <div class="slide-copy">
+              <div class="stamp">
+                <span class="stamp-num">№ 01</span>
+                <span>Personal medical vault</span>
+              </div>
+              <div class="slide-title-row">
+                <h3 class="slide-name">VitaCase</h3>
+                <span class="tag tag--positive">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  Available now
+                </span>
+              </div>
+              <h4 class="slide-headline">Keep your medical PDFs, reminders, and doctors in one private vault</h4>
+              <p class="slide-body">VitaCase stores blood test PDFs, clinic reports, medication reminders, and your saved doctors directly on your Android device. Files stay encrypted locally with AES-256-GCM — with no cloud upload, no account, and no OCR parsing.</p>
+              <ul class="check-list">
+                <li class="check-item">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <span>Store blood test PDFs, lab reports, and prescriptions in a local vault</span>
+                </li>
+                <li class="check-item">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <span>Keep doctor contacts, specialties, and clinics on a dedicated doctors page</span>
+                </li>
+                <li class="check-item">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <span>Set quiet daily medication reminders and track stock offline</span>
+                </li>
+              </ul>
+              <div class="slide-actions">
+                <a href="/apps/vitacase" class="btn btn-primary">
+                  Explore VitaCase
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+                <button type="button" class="btn btn-secondary" data-preview="vitacase">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 3h6v6" />
+                    <path d="m21 3-7 7" />
+                    <path d="M9 21H3v-6" />
+                    <path d="m3 21 7-7" />
+                  </svg>
+                  Quick preview
+                </button>
+              </div>
+            </div>
+
+            <div class="slide-well" aria-label="VitaCase mobile screen preview">
+              <div class="phone-card">
+                <div class="artifact-header">
+                  <span class="artifact-title">Document vault</span>
+                  <span class="artifact-meta">3 PDFs · Local</span>
+                </div>
+                <div class="doc-list">
+                  <div class="doc-row">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                    </svg>
+                    <div class="doc-meta-wrap">
+                      <div class="doc-filename">Blood_Test_Oct2026.pdf</div>
+                      <div class="doc-sub">Lab PDF · Oct 14</div>
+                    </div>
+                    <span class="doc-size">1.4 MB</span>
+                  </div>
+                  <div class="doc-row">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                    </svg>
+                    <div class="doc-meta-wrap">
+                      <div class="doc-filename">Cardiology_Echo_Sep2026.pdf</div>
+                      <div class="doc-sub">Clinic report · Sep 28</div>
+                    </div>
+                    <span class="doc-size">2.1 MB</span>
+                  </div>
+                </div>
+                <div class="schedule-row">
+                  <div>
+                    <div class="schedule-name">Vitamin D3 · 2000 IU</div>
+                    <div class="schedule-dose">Daily medication reminder</div>
+                  </div>
+                  <span class="schedule-time">20:00 Upcoming</span>
+                </div>
+                <div class="doctor-card">
+                  <div>
+                    <div class="doctor-name">Dr. Selin Kaya</div>
+                    <div class="doctor-detail">Internal Medicine · Memorial Clinic</div>
+                  </div>
+                  <span class="tag">Saved doctor</span>
+                </div>
+              </div>
+              <div class="well-caption">
+                <span>Android · Google Play</span>
+                <span>AES-256-GCM · No OCR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Meowoirs -->
+        <div class="catalog-panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden>
+          <div class="slide-grid">
+            <div class="slide-copy">
+              <div class="stamp">
+                <span class="stamp-num">№ 02</span>
+                <span>Every cat has a story</span>
+              </div>
+              <div class="slide-title-row">
+                <h3 class="slide-name">Meowoirs</h3>
+                <span class="tag tag--accent">New release</span>
+              </div>
+              <h4 class="slide-headline">A dedicated cat memory journal and relationship diary</h4>
+              <p class="slide-body">Whether it is a lifelong companion sleeping at the foot of your bed or a friendly neighborhood cat on a stone wall, Meowoirs provides an offline sanctuary for photos, notes, and mutual mood logs.</p>
+              <ul class="check-list">
+                <li class="check-item">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <span>Dedicated cat profiles for home companions and street cats</span>
+                </li>
+                <li class="check-item">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <span>Daily photo and note journaling stored locally in SQLite</span>
+                </li>
+                <li class="check-item">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <span>Dual-perspective mood reflections for cat and human</span>
+                </li>
+              </ul>
+              <div class="slide-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.limanex.meowoirs" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Google Play
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+                <button type="button" class="btn btn-secondary" data-preview="meowoirs">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 3h6v6" />
+                    <path d="m21 3-7 7" />
+                    <path d="M9 21H3v-6" />
+                    <path d="m3 21 7-7" />
+                  </svg>
+                  Quick preview
+                </button>
+                <a href="/apps/meowoirs" class="text-link">Explore Meowoirs</a>
+              </div>
+            </div>
+
+            <div class="slide-well" aria-label="Meowoirs journal entry preview">
+              <div class="phone-card">
+                <div class="artifact-header">
+                  <span class="artifact-title">Milo · Home profile</span>
+                  <span class="artifact-meta">142 entries</span>
+                </div>
+                <div class="journal-photo">
+                  <img src="/assets/meowoirs-poster.webp" alt="Milo sleeping curled up on a cream knit blanket" width="894" height="503" />
+                </div>
+                <p class="cat-entry-body">Fell asleep on the wool blanket right after lunch and stayed put for two hours</p>
+                <div class="mood-pair">
+                  <span class="tag tag--accent">Cat: Sleepy</span>
+                  <span class="tag">Human: Calm</span>
+                </div>
+              </div>
+              <div class="well-caption">
+                <span>Android · Google Play</span>
+                <span>100% offline SQLite</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Block Dimension -->
+        <div class="catalog-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+          <div class="slide-grid">
+            <div class="slide-copy">
+              <div class="stamp">
+                <span class="stamp-num">№ 03</span>
+                <span>Spatial physics and architecture</span>
+              </div>
+              <div class="slide-title-row">
+                <h3 class="slide-name">Block Dimension</h3>
+                <span class="tag">In development</span>
+              </div>
+              <h4 class="slide-headline">Tactile spatial geometry and native puzzle physics</h4>
+              <p class="slide-body">Our first original game pairs architectural block geometry with zero-latency physical interactions. Built on a native engine targeting steady 60 fps across mobile and spatial devices.</p>
+              <ul class="check-list">
+                <li class="check-item">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <span>Spatial 3D puzzle and architectural block mechanics</span>
+                </li>
+                <li class="check-item">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <span>Native engine performance targeting a steady 60 fps</span>
+                </li>
+                <li class="check-item">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <path d="m9 11 3 3L22 4" />
+                  </svg>
+                  <span>Designed for direct touch and spatial hardware</span>
+                </li>
+              </ul>
+              <div class="slide-actions">
+                <a href="/games" class="btn btn-primary">
+                  Discover preview
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="slide-well" aria-label="Block Dimension isometric study">
+              <div class="block-study">
+                <svg viewBox="0 0 320 240" fill="none" role="img" aria-label="Isometric study of interlocking matte charcoal, bone, and brass blocks">
+                  <!-- Drafting Grid -->
+                  <g stroke="#efe9de" stroke-opacity="0.09" stroke-width="1">
+                    <line x1="20" y1="196" x2="300" y2="196" />
+                    <line x1="160" y1="24" x2="160" y2="220" stroke-dasharray="3 4" />
+                    <line x1="48" y1="140" x2="272" y2="140" stroke-dasharray="3 4" />
+                  </g>
+                  <!-- Contact Shadows -->
+                  <polygon points="160,196 244,154 160,112 76,154" fill="#000000" fill-opacity="0.35" />
+                  <!-- Base Charcoal Block -->
+                  <polygon points="160,96 230,131 160,166 90,131" fill="#36332e" stroke="#6c665c" stroke-width="1.25" stroke-linejoin="round" />
+                  <polygon points="90,131 160,166 160,196 90,161" fill="#262421" stroke="#6c665c" stroke-width="1.25" stroke-linejoin="round" />
+                  <polygon points="160,166 230,131 230,161 160,196" fill="#1c1a18" stroke="#6c665c" stroke-width="1.25" stroke-linejoin="round" />
+                  <!-- Upper Bone Tower -->
+                  <polygon points="128,58 172,80 128,102 84,80" fill="#efe9de" stroke="#161513" stroke-width="1.25" stroke-linejoin="round" />
+                  <polygon points="84,80 128,102 128,136 84,114" fill="#c9c1b4" stroke="#161513" stroke-width="1.25" stroke-linejoin="round" />
+                  <polygon points="128,102 172,80 172,114 128,136" fill="#9d9588" stroke="#161513" stroke-width="1.25" stroke-linejoin="round" />
+                  <!-- Brass Key Block -->
+                  <polygon points="184,74 222,93 184,112 146,93" fill="#ebc16e" stroke="#161513" stroke-width="1.25" stroke-linejoin="round" />
+                  <polygon points="146,93 184,112 184,142 146,123" fill="#dca94e" stroke="#161513" stroke-width="1.25" stroke-linejoin="round" />
+                  <polygon points="184,112 222,93 222,123 184,142" fill="#b38232" stroke="#161513" stroke-width="1.25" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="well-caption">
+                <span>Iso 30° · Prototype study</span>
+                <span>60 fps target</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-dots" aria-label="Catalog pagination">
+          <button type="button" class="slide-dot" aria-label="Show VitaCase (slide 1)" aria-current="true" data-slide="0"></button>
+          <button type="button" class="slide-dot" aria-label="Show Meowoirs (slide 2)" aria-current="false" data-slide="1"></button>
+          <button type="button" class="slide-dot" aria-label="Show Block Dimension (slide 3)" aria-current="false" data-slide="2"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Games Studio Showcase -->
+    <section id="games" class="section" aria-label="Games studio showcase">
+      <div class="container">
+        <div class="games-card">
+          <div class="games-copy">
+            <div class="stamp">
+              <span class="stamp-num">№ 03</span>
+              <span>Interactive experiences</span>
+            </div>
+            <h2 class="section-title">Games in development</h2>
+            <p class="section-desc">We are building spatial puzzle titles around tactile geometry, predictable physics, and steady native frame rates</p>
+            <div class="meta-line">
+              <span>Spatial 3D</span>
+              <span aria-hidden="true">·</span>
+              <span>Native 60 fps target</span>
+              <span aria-hidden="true">·</span>
+              <span>Mobile and spatial</span>
+            </div>
+          </div>
+
+          <div class="games-side">
+            <div class="games-motif" aria-hidden="true">
+              <svg viewBox="0 0 220 110" fill="none">
+                <rect x="14" y="54" width="52" height="42" rx="4" fill="#262421" stroke="#6c665c" stroke-width="1.25" />
+                <rect x="78" y="34" width="52" height="62" rx="4" fill="#dca94e" stroke="#161513" stroke-width="1.25" />
+                <rect x="142" y="18" width="64" height="78" rx="4" fill="#efe9de" />
+                <line x1="8" y1="96" x2="212" y2="96" stroke="#6c665c" stroke-width="1.25" />
+              </svg>
+            </div>
+            <a href="/games" class="btn btn-primary">
+              Discover preview
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: AI Research Announcement -->
+    <section id="ai" class="section" aria-label="AI announcement">
+      <div class="container ai-grid">
+        <div class="ai-copy">
+          <div class="stamp">
+            <span class="stamp-num">№ 04</span>
+            <span>Research initiative</span>
+          </div>
+          <h2 class="section-title">Private intelligence, built on-device</h2>
+          <p class="section-desc">We are researching local, context-aware assistance for future Limanex apps. Helpful summaries stay on your device without uploading personal records to external servers.</p>
+          <div class="ai-actions">
+            <a href="/ai" class="btn btn-primary">
+              Explore AI vision
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+            <a href="/contact" class="btn btn-secondary">Partner with our studio</a>
+          </div>
+        </div>
+
+        <ol class="principles-card" aria-label="Architectural principles">
+          <li class="principle-row">
+            <span class="principle-num">01</span>
+            <div>
+              <h3 class="principle-title">Private by architecture</h3>
+              <p class="principle-desc">Isolated local execution with no personal records sent off your phone</p>
+            </div>
+          </li>
+          <li class="principle-row">
+            <span class="principle-num">02</span>
+            <div>
+              <h3 class="principle-title">Context-aware and quiet</h3>
+              <p class="principle-desc">Surfaces structured summaries only when your own entries make them useful</p>
+            </div>
+          </li>
+          <li class="principle-row">
+            <span class="principle-num">03</span>
+            <div>
+              <h3 class="principle-title">Phase 1 in progress</h3>
+              <p class="principle-desc">Internal engineering underway ahead of upcoming application updates</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="brand" aria-label="Limanex Studio — Home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-wordmark">Limanex Studio</span>
+          </a>
+          <p class="footer-tagline">Independent software studio building offline-first mobile apps and tactile spatial games</p>
+          <a href="mailto:limanexsoftware@outlook.com" class="footer-email">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            limanexsoftware@outlook.com
+          </a>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-list">
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="/apps" class="footer-link">Apps</a></li>
+            <li><a href="/games" class="footer-link">Games</a></li>
+            <li><a href="/ai" class="footer-link">AI initiative</a></li>
+            <li><a href="/contact" class="footer-link">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Legal and trust</h2>
+          <ul class="footer-list">
+            <li><a href="/privacy" class="footer-link">Legal center</a></li>
+            <li><a href="/privacy/meowoirs" class="footer-link">Meowoirs privacy</a></li>
+            <li><a href="/terms/meowoirs" class="footer-link">Meowoirs terms</a></li>
+            <li><a href="/privacy/vitacase" class="footer-link">VitaCase terms and privacy</a></li>
+            <li><a href="/delete-account" class="footer-link">Data deletion</a></li>
+            <li><a href="mailto:limanexsoftware@outlook.com" class="footer-link">Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Limanex Studio</span>
+        <span>Private, on-device software</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick Preview Dialog -->
+  <dialog class="preview-dialog" id="preview-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <div>
+          <div class="stamp" id="dialog-stamp"><span class="stamp-num">№ 01</span><span>App preview</span></div>
+          <h2 class="dialog-title" id="dialog-title">VitaCase</h2>
+        </div>
+        <button type="button" class="icon-btn" id="dialog-close" aria-label="Close preview">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="dialog-body" id="dialog-body"></div>
+      <div class="dialog-foot">
+        <button type="button" class="btn btn-secondary btn-sm" id="dialog-dismiss">Close</button>
+        <a href="/apps/vitacase" class="btn btn-primary btn-sm" id="dialog-link">Open product page</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/main.js"></script>
+</body>
 </html>

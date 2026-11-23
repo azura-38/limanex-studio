@@ -1,11 +1,11 @@
 {
   "name": "Limanex Studio",
   "short_name": "Limanex",
-  "description": "Apps & Games Designed for the Future. Precision-engineered for performance.",
+  "description": "Independent software studio building offline-first mobile apps and tactile spatial games.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#161513",
+  "theme_color": "#161513",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VitaCase — Encrypted Medical Vault, Reminders and Doctors | Limanex Studio</title>
+  <meta name="description" content="VitaCase stores blood test PDFs and clinical documents locally with AES-256-GCM encryption, schedules medication reminders, and organizes your saved doctors on one dedicated page." />
+  <link rel="canonical" href="https://limanexstudio.com/apps/vitacase" />
+  <meta name="theme-color" content="#161513" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Limanex Studio" />
+  <meta property="og:title" content="VitaCase — Encrypted Medical Vault, Reminders and Doctors | Limanex Studio" />
+  <meta property="og:description" content="VitaCase stores blood test PDFs and clinical documents locally with AES-256-GCM encryption, schedules medication reminders, and organizes your saved doctors on one dedicated page." />
+  <meta property="og:url" content="https://limanexstudio.com/apps/vitacase" />
+  <meta property="og:image" content="https://limanexstudio.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VitaCase — Encrypted Medical Vault, Reminders and Doctors | Limanex Studio" />
+  <meta name="twitter:description" content="VitaCase stores blood test PDFs and clinical documents locally with AES-256-GCM encryption, schedules medication reminders, and organizes your saved doctors on one dedicated page." />
+  <meta name="twitter:image" content="https://limanexstudio.com/og-image.png" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="/" class="brand" aria-label="Limanex Studio — Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-wordmark">Limanex</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link" aria-current="page">Apps</a>
+        <a href="/games" class="nav-link">Games</a>
+        <a href="/ai" class="nav-link">AI</a>
+        <a href="/privacy" class="nav-link">Legal</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/contact" class="btn btn-sm btn-primary nav-cta-desktop">
+          Get in touch
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16" />
+            <path d="M4 12h16" />
+            <path d="M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <div class="container">
+        <nav aria-label="Mobile navigation">
+          <ul class="mobile-nav-list">
+            <li><a href="/" class="mobile-nav-link">Home</a></li>
+            <li><a href="/apps" class="mobile-nav-link">Apps</a></li>
+            <li><a href="/games" class="mobile-nav-link">Games</a></li>
+            <li><a href="/ai" class="mobile-nav-link">AI</a></li>
+            <li><a href="/privacy" class="mobile-nav-link">Legal</a></li>
+          </ul>
+          <a href="/contact" class="btn btn-primary mobile-nav-cta">
+            Get in touch
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-top" aria-label="VitaCase overview">
+      <div class="container hero-enter">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/apps">Apps</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">VitaCase</span>
+        </nav>
+
+        <div class="app-hero-grid">
+          <div class="app-hero-copy">
+            <div class="app-listing-id">
+              <div class="app-icon-tile">
+                <img src="/assets/vitacase-icon.webp" alt="VitaCase app icon" width="48" height="48" />
+              </div>
+              <div class="stamp">
+                <span class="stamp-num">№ 01</span>
+                <span>Personal medical vault · Android</span>
+              </div>
+            </div>
+
+            <h1 class="page-title">Keep your medical PDFs, reminders, and doctors in one private vault</h1>
+            <p class="page-subhead">Store blood test PDFs and clinic reports locally without OCR parsing, manage daily medication reminders, and keep your saved doctors on a dedicated page</p>
+
+            <div class="hero-actions">
+              <a href="https://play.google.com/store/apps/details?id=com.limanex.vitacase" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="6 3 20 12 6 21 6 3" />
+                </svg>
+                Get it on Google Play
+              </a>
+              <a href="#gallery" class="btn btn-secondary">
+                View gallery
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+
+            <span class="hero-note">Free to use · No sign-up required · On-device AES-256-GCM</span>
+          </div>
+
+          <!-- Overview Artifact Card -->
+          <div class="slide-well" aria-label="VitaCase vault overview">
+            <div class="phone-card">
+              <div class="artifact-header">
+                <span class="artifact-title">Document vault</span>
+                <span class="tag tag--positive">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  Encrypted local
+                </span>
+              </div>
+              <div class="doc-list">
+                <div class="doc-row">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  </svg>
+                  <div class="doc-meta-wrap">
+                    <div class="doc-filename">Blood_Test_Oct2026.pdf</div>
+                    <div class="doc-sub">Lab PDF · Oct 14, 2026</div>
+                  </div>
+                  <span class="doc-size">1.4 MB</span>
+                </div>
+                <div class="doc-row">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  </svg>
+                  <div class="doc-meta-wrap">
+                    <div class="doc-filename">Prescription_Autumn.pdf</div>
+                    <div class="doc-sub">Prescription · Sep 10, 2026</div>
+                  </div>
+                  <span class="doc-size">420 KB</span>
+                </div>
+              </div>
+              <div class="mini-split">
+                <div class="mini-box">
+                  <span class="mini-kicker">Reminder · 20:00</span>
+                  <span class="mini-primary">Vitamin D3 2000 IU</span>
+                  <span class="mini-secondary">Daily · 24 capsules left</span>
+                </div>
+                <div class="mini-box">
+                  <span class="mini-kicker">Saved doctor</span>
+                  <span class="mini-primary">Dr. Selin Kaya</span>
+                  <span class="mini-secondary">Internal Medicine</span>
+                </div>
+              </div>
+            </div>
+            <div class="well-caption">
+              <span>Stored as original PDFs and files</span>
+              <span>No OCR scanning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container">
+        <ul class="trust-list">
+          <li class="trust-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            <span>AES-256-GCM encrypted on-device</span>
+          </li>
+          <li class="trust-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+              <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+            </svg>
+            <span>Files stored as-is — no OCR or diagnosis</span>
+          </li>
+          <li class="trust-item">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+            <span>Optional 6-digit PIN and biometric lock</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="section" aria-label="Core features">
+      <div class="container">
+        <div class="section-head">
+          <div class="stamp">
+            <span class="stamp-num">Features</span>
+            <span>Four dedicated modules</span>
+          </div>
+          <h2 class="section-title">Everything you need, nothing extra</h2>
+          <p class="section-desc">VitaCase stays focused on keeping your medical documents, medication schedule, and doctor contacts organized locally</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+              <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+              <path d="M10 9H8" />
+              <path d="M16 13H8" />
+              <path d="M16 17H8" />
+            </svg>
+            <h3 class="feature-title">PDF and blood test document vault</h3>
+            <p class="feature-copy">Save blood test PDFs, lab printouts, imaging reports, and prescriptions directly in an encrypted local folder so every document is ready before an appointment — stored as original files with no OCR text extraction.</p>
+          </article>
+
+          <article class="feature-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <h3 class="feature-title">Medication reminders and stock</h3>
+            <p class="feature-copy">Set clear daily medication and supplement schedules with local alerts and remaining-dose counts so you know when to take a dose or refill a prescription.</p>
+          </article>
+
+          <article class="feature-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            <h3 class="feature-title">Dedicated saved doctors page</h3>
+            <p class="feature-copy">Keep your doctors organized on their own directory page with specialty, hospital or clinic name, phone number, and personal visit notes for quick lookup.</p>
+          </article>
+
+          <article class="feature-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            <h3 class="feature-title">Private lock and emergency details</h3>
+            <p class="feature-copy">Files stay inside hardware-backed Android Keystore encryption, protected by an optional 6-digit PIN and biometric authentication alongside blood type and emergency contacts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section" aria-label="VitaCase module gallery">
+      <div class="container">
+        <div class="catalog-header">
+          <div class="section-head">
+            <div class="stamp">
+              <span class="stamp-num">Gallery</span>
+              <span>Inside the app</span>
+            </div>
+            <h2 class="section-title">Designed for clarity</h2>
+            <p class="section-desc">Browse each core module: encrypted PDF vault, medication schedule, saved doctors directory, and local security</p>
+          </div>
+        </div>
+
+        <div class="gallery-stage" data-gallery>
+          <div class="gallery-toolbar">
+            <div class="gallery-tabs" role="tablist" aria-label="VitaCase screens">
+              <button type="button" class="catalog-tab" role="tab" aria-selected="true" data-gallery-tab>
+                <span class="tab-num">01</span>
+                <span>Document vault</span>
+              </button>
+              <button type="button" class="catalog-tab" role="tab" aria-selected="false" data-gallery-tab>
+                <span class="tab-num">02</span>
+                <span>Medication reminders</span>
+              </button>
+              <button type="button" class="catalog-tab" role="tab" aria-selected="false" data-gallery-tab>
+                <span class="tab-num">03</span>
+                <span>Saved doctors</span>
+              </button>
+              <button type="button" class="catalog-tab" role="tab" aria-selected="false" data-gallery-tab>
+                <span class="tab-num">04</span>
+                <span>Security and lock</span>
+              </button>
+            </div>
+
+            <div class="catalog-controls">
+              <span class="slide-counter" data-gallery-counter aria-live="polite">01 / 04</span>
+              <button type="button" class="icon-btn" data-gallery-prev aria-label="Previous screen">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <button type="button" class="icon-btn" data-gallery-next aria-label="Next screen">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+              <button type="button" class="btn btn-sm btn-secondary" data-gallery-expand>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 3h6v6" />
+                  <path d="m21 3-7 7" />
+                  <path d="M9 21H3v-6" />
+                  <path d="m3 21 7-7" />
+                </svg>
+                Expand
+              </button>
+            </div>
+          </div>
+
+          <div class="gallery-viewport">
+            <!-- Screen 1: Document Vault -->
+            <div class="gallery-screen" role="tabpanel" data-gallery-screen data-title="Document vault">
+              <div class="gallery-screen-grid">
+                <div class="gallery-caption-col">
+                  <div class="stamp"><span class="stamp-num">№ 01</span><span>PDF and document vault</span></div>
+                  <h3 class="gallery-screen-title">Store blood test PDFs and clinic files as-is</h3>
+                  <p class="gallery-screen-desc">Import blood work PDFs, ultrasound reports, or prescriptions from your phone and keep them sorted by date and category. Documents stay in their original format with no OCR scanning or automated reading.</p>
+                </div>
+
+                <div class="phone-card">
+                  <div class="artifact-header">
+                    <span class="artifact-title">Document vault</span>
+                    <span class="artifact-meta">4 files · 4.6 MB</span>
+                  </div>
+                  <div class="doc-list">
+                    <div class="doc-row">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                      </svg>
+                      <div class="doc-meta-wrap">
+                        <div class="doc-filename">Blood_Test_Oct2026.pdf</div>
+                        <div class="doc-sub">Lab PDF · Oct 14, 2026</div>
+                      </div>
+                      <span class="doc-size">1.4 MB</span>
+                    </div>
+                    <div class="doc-row">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                      </svg>
+                      <div class="doc-meta-wrap">
+                        <div class="doc-filename">Cardiology_Echo_Sep2026.pdf</div>
+                        <div class="doc-sub">Clinic report · Sep 28, 2026</div>
+                      </div>
+                      <span class="doc-size">2.1 MB</span>
+                    </div>
+                    <div class="doc-row">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                      </svg>
+                      <div class="doc-meta-wrap">
+                        <div class="doc-filename">Prescription_Autumn.pdf</div>
+                        <div class="doc-sub">Prescription · Sep 10, 2026</div>
+                      </div>
+                      <span class="doc-size">420 KB</span>
+                    </div>
+                    <div class="doc-row">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                      </svg>
+                      <div class="doc-meta-wrap">
+                        <div class="doc-filename">Dental_Xray_Summary.pdf</div>
+                        <div class="doc-sub">Imaging · Aug 19, 2026</div>
+                      </div>
+                      <span class="doc-size">680 KB</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 2: Medication Reminders -->
+            <div class="gallery-screen" role="tabpanel" data-gallery-screen data-title="Medication reminders" hidden>
+              <div class="gallery-screen-grid">
+                <div class="gallery-caption-col">
+                  <div class="stamp"><span class="stamp-num">№ 02</span><span>Medication and stock</span></div>
+                  <h3 class="gallery-screen-title">Track daily doses and remaining stock</h3>
+                  <p class="gallery-screen-desc">Log doses as taken and keep track of remaining pills or capsules on your device. Local notifications alert you on schedule without needing internet access.</p>
+                </div>
+
+                <div class="phone-card">
+                  <div class="artifact-header">
+                    <span class="artifact-title">Today's schedule</span>
+                    <span class="artifact-meta">Oct 18, 2026</span>
+                  </div>
+                  <div class="schedule-row">
+                    <div>
+                      <div class="schedule-name">Levothyroxine · 50 mcg</div>
+                      <div class="schedule-dose">Before breakfast · 42 tablets left</div>
+                    </div>
+                    <span class="tag tag--positive">08:00 Taken</span>
+                  </div>
+                  <div class="schedule-row">
+                    <div>
+                      <div class="schedule-name">Iron Bisglycinate · 25 mg</div>
+                      <div class="schedule-dose">Midday · 28 capsules left</div>
+                    </div>
+                    <span class="tag tag--positive">13:00 Taken</span>
+                  </div>
+                  <div class="schedule-row">
+                    <div>
+                      <div class="schedule-name">Vitamin D3 · 2000 IU</div>
+                      <div class="schedule-dose">With dinner · 24 capsules left</div>
+                    </div>
+                    <span class="schedule-time">20:00 Upcoming</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 3: Saved Doctors -->
+            <div class="gallery-screen" role="tabpanel" data-gallery-screen data-title="Saved doctors" hidden>
+              <div class="gallery-screen-grid">
+                <div class="gallery-caption-col">
+                  <div class="stamp"><span class="stamp-num">№ 03</span><span>Saved doctors page</span></div>
+                  <h3 class="gallery-screen-title">All your doctors and clinic contacts on one page</h3>
+                  <p class="gallery-screen-desc">Save each doctor's full name, medical specialty, hospital or clinic location, direct phone number, and follow-up appointment notes in one dedicated directory.</p>
+                </div>
+
+                <div class="phone-card">
+                  <div class="artifact-header">
+                    <span class="artifact-title">Doctors directory</span>
+                    <span class="artifact-meta">3 saved</span>
+                  </div>
+                  <div class="doctor-list">
+                    <div class="doctor-card">
+                      <div>
+                        <div class="doctor-name">Dr. Selin Kaya</div>
+                        <div class="doctor-detail">Internal Medicine · Memorial Clinic · Room 304</div>
+                      </div>
+                      <span class="doctor-phone">+90 212 555 0142</span>
+                    </div>
+                    <div class="doctor-card">
+                      <div>
+                        <div class="doctor-name">Dr. Emre Aydın</div>
+                        <div class="doctor-detail">Cardiology · City Medical Center · Floor 2</div>
+                      </div>
+                      <span class="doctor-phone">+90 212 555 0189</span>
+                    </div>
+                    <div class="doctor-card">
+                      <div>
+                        <div class="doctor-name">Dr. Deniz Arslan</div>
+                        <div class="doctor-detail">Family Medicine · Kadıköy Health Hub</div>
+                      </div>
+                      <span class="doctor-phone">+90 216 555 0114</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 4: Security & Critical Info -->
+            <div class="gallery-screen" role="tabpanel" data-gallery-screen data-title="Security and emergency info" hidden>
+              <div class="gallery-screen-grid">
+                <div class="gallery-caption-col">
+                  <div class="stamp"><span class="stamp-num">№ 04</span><span>Vault security</span></div>
+                  <h3 class="gallery-screen-title">Protected by PIN, biometrics, and local encryption</h3>
+                  <p class="gallery-screen-desc">Vault keys are generated and stored on-device via Android Keystore. Keep optional PIN or biometric lock active alongside your blood type and emergency contact details.</p>
+                </div>
+
+                <div class="phone-card">
+                  <div class="artifact-header">
+                    <span class="artifact-title">Data and security</span>
+                    <span class="tag tag--positive">Local only</span>
+                  </div>
+                  <div class="lab-list">
+                    <div class="lab-row">
+                      <span class="lab-name">Vault cipher</span>
+                      <span class="lab-ref">Keystore</span>
+                      <span class="lab-val">AES-256-GCM</span>
+                    </div>
+                    <div class="lab-row">
+                      <span class="lab-name">6-digit PIN lock</span>
+                      <span class="lab-ref">Optional</span>
+                      <span class="lab-val">Enabled</span>
+                    </div>
+                    <div class="lab-row">
+                      <span class="lab-name">Biometric unlock</span>
+                      <span class="lab-ref">OS local_auth</span>
+                      <span class="lab-val">Enabled</span>
+                    </div>
+                    <div class="lab-row">
+                      <span class="lab-name">Blood type</span>
+                      <span class="lab-ref">Emergency card</span>
+                      <span class="lab-val">A Rh+</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Device requirements and policies">
+      <div class="container req-grid">
+        <div class="info-panel">
+          <div class="stamp"><span class="stamp-num">Requirements</span><span>Device support</span></div>
+          <h2 class="section-title">Device requirements</h2>
+          <ul class="req-list">
+            <li class="req-row">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                <path d="M12 18h.01" />
+              </svg>
+              <span>Android 8.0 (Oreo) or later</span>
+            </li>
+            <li class="req-row">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="14" x="3" y="5" rx="2" />
+              </svg>
+              <span>Optimized for smartphones and tablets</span>
+            </li>
+            <li class="req-row">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              <span>On-device hardware-backed encryption</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-panel">
+          <div class="stamp"><span class="stamp-num">Compliance</span><span>Legal and privacy</span></div>
+          <h2 class="section-title">Legal and privacy</h2>
+          <p class="section-desc">Review the unified legal document covering VitaCase local data custody, medication reminders, KVKK disclosures, and data deletion</p>
+          <div class="legal-doc-list">
+            <a href="/privacy/vitacase" class="legal-doc-row">
+              <span>VitaCase Privacy Policy</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+            <a href="/privacy/vitacase#section-terms" class="legal-doc-row">
+              <span>Terms of Use</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+            <a href="/privacy/vitacase#section-disclaimer" class="legal-doc-row">
+              <span>Health and Medical Disclaimer</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+            <a href="/delete-account" class="legal-doc-row">
+              <span>Data Deletion Instructions</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Download VitaCase">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <div class="stamp"><span class="stamp-num">№ 01</span><span>VitaCase on Android</span></div>
+            <h2 class="section-title">Keep every report and doctor close</h2>
+            <p class="section-desc">Free on Google Play with no sign-up required</p>
+          </div>
+          <a href="https://play.google.com/store/apps/details?id=com.limanex.vitacase" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Get it on Google Play
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="brand" aria-label="Limanex Studio — Home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-wordmark">Limanex Studio</span>
+          </a>
+          <p class="footer-tagline">Independent software studio building offline-first mobile apps and tactile spatial games</p>
+          <a href="mailto:limanexsoftware@outlook.com" class="footer-email">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            limanexsoftware@outlook.com
+          </a>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-list">
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="/apps" class="footer-link">Apps</a></li>
+            <li><a href="/games" class="footer-link">Games</a></li>
+            <li><a href="/ai" class="footer-link">AI initiative</a></li>
+            <li><a href="/contact" class="footer-link">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Legal and trust</h2>
+          <ul class="footer-list">
+            <li><a href="/privacy" class="footer-link">Legal center</a></li>
+            <li><a href="/privacy/meowoirs" class="footer-link">Meowoirs privacy</a></li>
+            <li><a href="/terms/meowoirs" class="footer-link">Meowoirs terms</a></li>
+            <li><a href="/privacy/vitacase" class="footer-link">VitaCase terms and privacy</a></li>
+            <li><a href="/delete-account" class="footer-link">Data deletion</a></li>
+            <li><a href="mailto:limanexsoftware@outlook.com" class="footer-link">Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Limanex Studio</span>
+        <span>Private, on-device software</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Gallery Lightbox Dialog -->
+  <dialog class="preview-dialog" id="gallery-lightbox" aria-labelledby="lightbox-title">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <div>
+          <div class="stamp" id="lightbox-stamp"><span class="stamp-num">№ 01</span><span>Screen preview</span></div>
+          <h2 class="dialog-title" id="lightbox-title">Document vault</h2>
+        </div>
+        <button type="button" class="icon-btn" id="lightbox-close" aria-label="Close preview">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="dialog-body" id="lightbox-body"></div>
+      <div class="dialog-foot">
+        <button type="button" class="btn btn-secondary btn-sm" id="lightbox-dismiss">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/main.js"></script>
+</body>
+</html>

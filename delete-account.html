@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Deletion Instructions — VitaCase | Limanex Studio</title>
+  <meta name="description" content="How to permanently delete your VitaCase encrypted local vault, medications, saved doctors, and telemetry inquiries." />
+  <link rel="canonical" href="https://limanexstudio.com/delete-account" />
+  <meta name="theme-color" content="#161513" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Limanex Studio" />
+  <meta property="og:title" content="Data Deletion Instructions — VitaCase | Limanex Studio" />
+  <meta property="og:description" content="How to permanently delete your VitaCase encrypted local vault, medications, saved doctors, and telemetry inquiries." />
+  <meta property="og:url" content="https://limanexstudio.com/delete-account" />
+  <meta property="og:image" content="https://limanexstudio.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data Deletion Instructions — VitaCase | Limanex Studio" />
+  <meta name="twitter:description" content="How to permanently delete your VitaCase encrypted local vault, medications, saved doctors, and telemetry inquiries." />
+  <meta name="twitter:image" content="https://limanexstudio.com/og-image.png" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="/" class="brand" aria-label="Limanex Studio — Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-wordmark">Limanex</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/apps" class="nav-link">Apps</a>
+        <a href="/games" class="nav-link">Games</a>
+        <a href="/ai" class="nav-link">AI</a>
+        <a href="/privacy" class="nav-link" aria-current="page">Legal</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/contact" class="btn btn-sm btn-primary nav-cta-desktop">
+          Get in touch
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 7h16" />
+            <path d="M4 12h16" />
+            <path d="M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <div class="container">
+        <nav aria-label="Mobile navigation">
+          <ul class="mobile-nav-list">
+            <li><a href="/" class="mobile-nav-link">Home</a></li>
+            <li><a href="/apps" class="mobile-nav-link">Apps</a></li>
+            <li><a href="/games" class="mobile-nav-link">Games</a></li>
+            <li><a href="/ai" class="mobile-nav-link">AI</a></li>
+            <li><a href="/privacy" class="mobile-nav-link">Legal</a></li>
+          </ul>
+          <a href="/contact" class="btn btn-primary mobile-nav-cta">
+            Get in touch
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-top" aria-label="Data deletion instructions">
+      <div class="container hero-enter">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/privacy">Legal</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Data deletion</span>
+        </nav>
+
+        <div class="legal-layout">
+          <aside class="legal-sidebar" aria-label="Document navigation">
+            <div>
+              <div class="sidebar-group-title">On this page</div>
+              <ul class="toc-list">
+                <li><a href="#local-storage" class="toc-link">Local storage architecture</a></li>
+                <li><a href="#deletion-methods" class="toc-link">How to delete your data</a></li>
+                <li><a href="#telemetry" class="toc-link">Diagnostic telemetry</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="sidebar-group-title">Related documents</div>
+              <ul class="toc-list">
+                <li><a href="/privacy/vitacase" class="toc-link">VitaCase Terms and Privacy</a></li>
+                <li><a href="/privacy/vitacase#section-deletion" class="toc-link">Section 5 (Retention policy)</a></li>
+                <li><a href="/privacy" class="toc-link">Back to Legal Center</a></li>
+                <li><a href="/contact" class="toc-link">Contact support</a></li>
+              </ul>
+            </div>
+          </aside>
+
+          <article class="legal-article">
+            <header class="legal-header">
+              <div class="stamp">
+                <span class="stamp-num">Custody</span>
+                <span>VitaCase Personal Health Organizer · Published by LIMANEX</span>
+              </div>
+              <h1 class="page-title">Data deletion instructions</h1>
+              <p class="legal-p">All health documents, medication schedules, and saved doctor records in VitaCase live directly on your Android device — never on remote Limanex servers.</p>
+            </header>
+
+            <section id="local-storage" class="legal-section">
+              <h2 class="legal-h2">Local storage: no remote cloud accounts</h2>
+              <p class="legal-p">VitaCase operates without user accounts, usernames, or Limanex-hosted cloud databases. PDFs, blood test reports, medication schedules, and saved doctor entries are stored in your device's encrypted local vault using AES-256-GCM and hardware-backed key storage.</p>
+            </section>
+
+            <section id="deletion-methods" class="legal-section">
+              <h2 class="legal-h2">How to delete your data</h2>
+              <div class="step-list">
+                <div class="step-card">
+                  <span class="step-num">01</span>
+                  <div>
+                    <h3 class="principle-title">In-app complete data wipe ("Clear All Data" / "Tüm Verileri Temizle")</h3>
+                    <p class="legal-p" style="margin-top: 6px;">Open VitaCase and navigate to <strong>Settings</strong> → <strong>Data &amp; Security</strong> ("Veri ve Güvenlik") → tap <strong>"Clear All Data"</strong>. This immediately deletes the local database, encrypted vault files, FlutterSecureStorage encryption key, saved doctors, and scheduled local reminders.</p>
+                  </div>
+                </div>
+
+                <div class="step-card">
+                  <span class="step-num">02</span>
+                  <div>
+                    <h3 class="principle-title">Application uninstallation</h3>
+                    <p class="legal-p" style="margin-top: 6px;">Uninstalling VitaCase removes the isolated application sandbox and all stored local files on your device. If your device has Google Drive / Android Auto Backup enabled at the OS level, manage OS backups through your Google Account device backup settings.</p>
+                  </div>
+                </div>
+
+                <div class="step-card">
+                  <span class="step-num">03</span>
+                  <div>
+                    <h3 class="principle-title">Selective manual deletion</h3>
+                    <p class="legal-p" style="margin-top: 6px;">Open or swipe any individual PDF document, medication entry, doctor record, or appointment inside the app and tap <strong>"Delete"</strong> to remove only that item permanently.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="telemetry" class="legal-section">
+              <h2 class="legal-h2">Diagnostic telemetry and privacy inquiries</h2>
+              <p class="legal-p">While your vault documents never leave your device, VitaCase uses third-party SDKs (Firebase Analytics, Firebase Crashlytics, and Sentry) for anonymized crash diagnostics and app stability metrics.</p>
+              <p class="legal-p">To submit a formal GDPR or KVKK deletion inquiry regarding anonymized diagnostic telemetry, email <a href="mailto:limanexsoftware@outlook.com?subject=Data%20Deletion%20Request%20%E2%80%94%20VitaCase">limanexsoftware@outlook.com</a> with the subject line <strong>Data Deletion Request — VitaCase</strong>.</p>
+              <p class="legal-p"><a href="/privacy/vitacase#section-deletion">Read Section 5 (Data Retention and Deletion Policy) in VitaCase Terms and Privacy</a></p>
+            </section>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="brand" aria-label="Limanex Studio — Home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-wordmark">Limanex Studio</span>
+          </a>
+          <p class="footer-tagline">Independent software studio building offline-first mobile apps and tactile spatial games</p>
+          <a href="mailto:limanexsoftware@outlook.com" class="footer-email">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            limanexsoftware@outlook.com
+          </a>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Navigation</h2>
+          <ul class="footer-list">
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="/apps" class="footer-link">Apps</a></li>
+            <li><a href="/games" class="footer-link">Games</a></li>
+            <li><a href="/ai" class="footer-link">AI initiative</a></li>
+            <li><a href="/contact" class="footer-link">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Legal and trust</h2>
+          <ul class="footer-list">
+            <li><a href="/privacy" class="footer-link">Legal center</a></li>
+            <li><a href="/privacy/meowoirs" class="footer-link">Meowoirs privacy</a></li>
+            <li><a href="/terms/meowoirs" class="footer-link">Meowoirs terms</a></li>
+            <li><a href="/privacy/vitacase" class="footer-link">VitaCase terms and privacy</a></li>
+            <li><a href="/delete-account" class="footer-link">Data deletion</a></li>
+            <li><a href="mailto:limanexsoftware@outlook.com" class="footer-link">Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Limanex Studio</span>
+        <span>Private, on-device software</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>
